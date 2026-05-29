@@ -30,11 +30,6 @@ export default async function LoginPage() {
           </div>
 
           <LoginForm />
-
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-            Local/dev seed account: <strong>admin@ecobright.local</strong> /{" "}
-            <strong>Admin@123456</strong>
-          </div>
         </CardContent>
       </Card>
     </div>
