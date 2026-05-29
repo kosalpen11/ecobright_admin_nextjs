@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@10.12.1",
   "scripts": {
-    "build": "prisma generate && nx build admin",
+    "build": "prisma generate && nx build admin && rm -rf .next && cp -R apps/admin/.next .next",
     "dev": "nx dev admin",
     "nx": "nx",
     "prisma": "prisma",

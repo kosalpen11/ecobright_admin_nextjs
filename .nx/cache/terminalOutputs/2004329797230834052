@@ -1,0 +1,39 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.3:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1467ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.8s (982 modules)
+ GET / [32m200[39m in 3241ms
+ [32m[1m✓[22m[39m Compiled /middleware in 197ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1247ms (1224 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1548ms
+ GET /dashboard [32m200[39m in 6302ms
+ [32m[1m✓[22m[39m Compiled /products in 379ms (1231 modules)
+ GET /products [32m200[39m in 1308ms
+ GET /dashboard [32m200[39m in 1864ms
+ [32m[1m✓[22m[39m Compiled /stock in 288ms (1237 modules)
+ GET /stock [32m200[39m in 2195ms
+ GET /products [32m200[39m in 1251ms
+ GET /dashboard [32m200[39m in 2168ms
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+^C[?25h

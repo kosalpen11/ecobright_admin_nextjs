@@ -2,12 +2,12 @@
 
    ▲ Next.js 15.5.18
 
-(node:33972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:42311) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
    Creating an optimized production build ...
-(node:34138) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:42588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
- ✓ Compiled successfully in 6.8s
+ ✓ Compiled successfully in 6.6s
    Linting and checking validity of types ...
    Collecting page data ...
    Generating static pages (0/12) ...
