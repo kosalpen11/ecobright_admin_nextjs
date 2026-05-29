@@ -1,0 +1,90 @@
+[2m> [22mnext dev apps/admin
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by process 86926, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.3:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1535ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 1238ms (973 modules)
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processTimers (node:internal/timers:516:9)
+ GET / [32m200[39m in 2606ms
+ [32m[1m✓[22m[39m Compiled in 1347ms (337 modules)
+ [32m[1m✓[22m[39m Compiled /login in 450ms (1192 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processTimers (node:internal/timers:516:9)
+ GET /login [32m200[39m in 711ms
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+ GET / [32m200[39m in 30ms
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+ GET /login [32m200[39m in 51ms
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+    at async signIn (webpack-internal:///(action-browser)/../../node_modules/.pnpm/next-auth@5.0.0-beta.31_next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6__react@19.2.6/node_modules/next-auth/lib/actions.js:53:17)
+    at async loginAction (webpack-internal:///(action-browser)/./app/login/actions.ts:28:9)
+    at async executeActionAndPrepareForRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:3117)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:958
+    at async handleAction (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:32:22838)
+    at async renderToHTMLOrFlightImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:40020)
+    at async doRender (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:428:28)
+    at async AppPageRouteModule.handleResponse (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:41:57424)
+    at async handleResponse (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:580:32)
+    at async handler (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:958:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1430:9)
+    at async DevServer.renderPageComponent (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1482:24)
+    at async DevServer.renderToResponseImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1522:32)
+    at async DevServer.pipeImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:917:17)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:400:20
+    at async Span.traceAsyncFn (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:396:24)
+    at async invokeRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:437:24)
+    at async requestHandlerImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:485:13)
+    at async Server.requestListener (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js:226:13)
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 340ms (1197 modules)
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async AppRouteRouteModule.do (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:38696)
+ GET /api/auth/callback/credentials [31m500[39m in 924ms
+ POST /login [34m303[39m in 1023ms
+[31m[auth][error][0m UnsupportedStrategy: Signing in with credentials only supported if JWT strategy is enabled. Read more at https://errors.authjs.dev#unsupportedstrategy
+    at assertConfig (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/utils/assert.js:124:20)
+    at Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:91:95)
+    at async AppRouteRouteModule.do (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:38696)
+ GET /api/auth/callback/credentials? [31m500[39m in 8ms
+ [32m[1m✓[22m[39m Compiled /_not-found in 256ms (1202 modules)
+ GET /apple-touch-icon.png [33m404[39m in 521ms
+ GET /apple-touch-icon-precomposed.png [33m404[39m in 527ms
+ [32m[1m✓[22m[39m Compiled in 414ms (1216 modules)
+ [32m[1m✓[22m[39m Compiled in 155ms (348 modules)
+ [32m[1m✓[22m[39m Compiled in 128ms (348 modules)
+ [32m[1m✓[22m[39m Compiled in 73ms (348 modules)
+ [32m[1m✓[22m[39m Compiled in 66ms (348 modules)
+ [32m[1m✓[22m[39m Compiled in 373ms (1206 modules)
+ [32m[1m✓[22m[39m Compiled in 74ms (348 modules)
+ [32m[1m✓[22m[39m Compiled in 170ms (344 modules)
+ [32m[1m✓[22m[39m Compiled in 76ms (344 modules)
+ [32m[1m✓[22m[39m Compiled in 373ms (344 modules)
+ [32m[1m✓[22m[39m Compiled in 167ms (344 modules)
+ [32m[1m✓[22m[39m Compiled in 129ms (344 modules)
+ [32m[1m✓[22m[39m Compiled in 55ms (344 modules)
+^C[?25h

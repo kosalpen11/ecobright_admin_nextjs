@@ -1,0 +1,46 @@
+> next build apps/admin
+
+   ▲ Next.js 15.5.18
+
+(node:85971) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:86273) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 6.7s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/12) ...
+   Generating static pages (3/12) 
+   Generating static pages (6/12) 
+   Generating static pages (9/12) 
+ ✓ Generating static pages (12/12)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ƒ /                                      124 B         102 kB
+├ ○ /_not-found                            994 B         103 kB
+├ ƒ /api/auth/[...nextauth]                124 B         102 kB
+├ ƒ /categories                          2.27 kB         145 kB
+├ ƒ /categories/[id]/edit                2.27 kB         145 kB
+├ ƒ /categories/new                      2.27 kB         145 kB
+├ ƒ /dashboard                           2.27 kB         145 kB
+├ ƒ /login                               2.88 kB         143 kB
+├ ƒ /products                            2.27 kB         145 kB
+├ ƒ /products/[id]/edit                  2.27 kB         145 kB
+├ ƒ /products/new                        2.27 kB         145 kB
+├ ƒ /stock                               2.27 kB         145 kB
+├ ƒ /users                               2.27 kB         145 kB
+└ ƒ /users/[id]/password                 2.27 kB         145 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/1403cfaa-6db8521358bcd91a.js  54.2 kB
+  ├ chunks/159-2398f495578bc26c.js       45.8 kB
+  └ other shared chunks (total)          1.89 kB
+
+
+ƒ Middleware                               34 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

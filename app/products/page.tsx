@@ -115,7 +115,7 @@ export default async function ProductsPage({
         title="Catalog"
         description="Use paged reads to keep the product list responsive as the catalog grows."
         action={
-          <Link href="/products/new" className="button-link">
+          <Link href="/products/new" className="button-link primary">
             New Product
           </Link>
         }

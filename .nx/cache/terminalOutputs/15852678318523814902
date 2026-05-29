@@ -1,0 +1,185 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by process 46909, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.3:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1494ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 1104ms (964 modules)
+ GET / [32m200[39m in 2579ms
+ [32m[1m✓[22m[39m Compiled /login in 451ms (1010 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /login [32m200[39m in 713ms
+ GET / [32m200[39m in 31ms
+ GET /login [32m200[39m in 57ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 225ms (1015 modules)
+ GET /api/auth/providers [32m200[39m in 815ms
+ GET /api/auth/csrf [32m200[39m in 9ms
+ POST /api/auth/callback/credentials? [32m200[39m in 3102ms
+ [32m[1m✓[22m[39m Compiled /middleware in 97ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 591ms (1254 modules)
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+The column `stock_movements.previous_stock` does not exist in the current database.
+ [31m[1m⨯[22m[39m Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+The column `stock_movements.previous_stock` does not exist in the current database.
+    at async DashboardPage (app/dashboard/page.tsx:20:7)
+[0m [90m 18 |[39m     lowStockProducts[33m,[39m
+ [90m 19 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 20 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 21 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 22 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  code: [32m'P2022'[39m,
+  meta: [36m[Object][39m,
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'1862016314'[39m
+}
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+The column `stock_movements.previous_stock` does not exist in the current database.
+ [31m[1m⨯[22m[39m Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+The column `stock_movements.previous_stock` does not exist in the current database.
+    at async DashboardPage (app/dashboard/page.tsx:20:7)
+[0m [90m 18 |[39m     lowStockProducts[33m,[39m
+ [90m 19 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 20 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 21 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 22 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  code: [32m'P2022'[39m,
+  meta: [36m[Object][39m,
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'1862016314'[39m
+}
+ GET /dashboard [32m200[39m in 3051ms
+ GET /dashboard [32m200[39m in 2238ms
+ GET /dashboard [32m200[39m in 2573ms
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 561ms (1266 modules)
+ GET /products [32m200[39m in 1435ms
+ [32m[1m✓[22m[39m Compiled /categories in 277ms (1272 modules)
+ GET /categories [32m200[39m in 2060ms
+ [32m[1m✓[22m[39m Compiled /stock in 300ms (1278 modules)
+ GET /stock [32m200[39m in 2544ms
+ [32m[1m✓[22m[39m Compiled /users in 414ms (1284 modules)
+[31mprisma:error[39m 
+Invalid `prisma.user.findMany()` invocation:
+
+
+The table `public.sessions` does not exist in the current database.
+ [31m[1m⨯[22m[39m Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.user.findMany()` invocation:
+
+
+The table `public.sessions` does not exist in the current database.
+    at async UsersPage (app/users/page.tsx:20:68)
+[0m [90m 18 |[39m   [36mconst[39m { page[33m,[39m pageSize[33m,[39m skip } [33m=[39m getPagination(pageParam[33m,[39m pageSizeParam)[33m;[39m
+ [90m 19 |[39m
+[31m[1m>[22m[39m[90m 20 |[39m   [36mconst[39m [totalUsers[33m,[39m adminCount[33m,[39m staffCount[33m,[39m activeCount[33m,[39m users] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                                                    [31m[1m^[22m[39m
+ [90m 21 |[39m     db[33m.[39muser[33m.[39mcount()[33m,[39m
+ [90m 22 |[39m     db[33m.[39muser[33m.[39mcount({ where[33m:[39m { role[33m:[39m [32m"ADMIN"[39m } })[33m,[39m
+ [90m 23 |[39m     db[33m.[39muser[33m.[39mcount({ where[33m:[39m { role[33m:[39m [32m"STAFF"[39m } })[33m,[39m[0m {
+  code: [32m'P2021'[39m,
+  meta: [36m[Object][39m,
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'1120483336'[39m
+}
+ GET /users [32m200[39m in 1699ms
+ [32m[1m✓[22m[39m Compiled in 822ms (1272 modules)
+ GET /users [32m200[39m in 1153ms
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'2437639362'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: [32m'3846016084'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'2111085879'[39m
+}
+[TypeError: Cannot read properties of undefined (reading 'call')]
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')]
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  page: [32m'/users'[39m
+}
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 591ms (1605 modules)
+ GET /users [31m500[39m in 3606ms
+ GET /users [32m200[39m in 1229ms
+ GET /users [32m200[39m in 479ms
+^C[?25h

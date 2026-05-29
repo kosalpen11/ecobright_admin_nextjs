@@ -1,0 +1,176 @@
+{
+  "apps/admin": {
+    "root": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "apps/admin/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.executor": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.options": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dev.options.command": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/admin/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "packages/db": {
+    "root": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/db/package.json",
+      "nx/core/package-json"
+    ]
+  },
+  "packages/validators": {
+    "root": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "packages/validators/package.json",
+      "nx/core/package-json"
+    ]
+  }
+}

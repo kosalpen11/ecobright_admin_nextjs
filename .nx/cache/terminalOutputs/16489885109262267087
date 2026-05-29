@@ -1,0 +1,128 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by process 46909, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.3:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1770ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [37m[1m○[22m[39m Compiling /login ...
+ [32m[1m✓[22m[39m Compiled /login in 1454ms (1123 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ GET /login [32m200[39m in 1945ms
+ GET /login [32m200[39m in 80ms
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1221ms (1262 modules)
+ GET /dashboard [32m200[39m in 1534ms
+ GET /login [32m200[39m in 83ms
+ GET /dashboard [32m200[39m in 5762ms
+ [32m[1m✓[22m[39m Compiled / in 415ms (1253 modules)
+ GET / [32m200[39m in 650ms
+ GET /dashboard [32m200[39m in 1980ms
+ [32m[1m✓[22m[39m Compiled /products in 381ms (1274 modules)
+ GET /products [32m200[39m in 1224ms
+ [32m[1m✓[22m[39m Compiled /categories in 395ms (1280 modules)
+ GET /categories [32m200[39m in 2588ms
+ GET /products [32m200[39m in 978ms
+ GET /dashboard [32m200[39m in 1334ms
+ [37m[1m○[22m[39m Compiling /api/auth/[...nextauth] ...
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 568ms (1283 modules)
+ GET /api/auth/providers [32m200[39m in 1235ms
+ GET /api/auth/csrf [32m200[39m in 9ms
+ POST /api/auth/callback/credentials? [32m200[39m in 1169ms
+ GET /dashboard [32m200[39m in 2247ms
+ GET /dashboard [32m200[39m in 2326ms
+ [32m[1m✓[22m[39m Compiled in 788ms (1300 modules)
+ GET /dashboard [32m200[39m in 961ms
+ GET /dashboard [32m200[39m in 1775ms
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: [32m'1925531821'[39m
+}
+ POST /dashboard [31m500[39m in 242ms
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: [32m'1925531821'[39m
+}
+ POST /dashboard [31m500[39m in 150ms
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'2437639362'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: [32m'4019468776'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'760068972'[39m
+}
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: [32m'3846016084'[39m
+}
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'2111085879'[39m
+}
+[TypeError: Cannot read properties of undefined (reading 'call')]
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')]
+ [31m[1m⨯[22m[39m [TypeError: Cannot read properties of undefined (reading 'call')] {
+  page: [32m'/dashboard'[39m
+}
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [31m500[39m in 2532ms
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 679ms (1633 modules)
+ GET /dashboard [32m200[39m in 2513ms
+ GET /dashboard [32m200[39m in 2780ms
+ GET /dashboard [32m200[39m in 3717ms
+^C[?25h

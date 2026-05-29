@@ -1,0 +1,77 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by process 46909, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.3:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1617ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [32m[1m✓[22m[39m Compiled /middleware in 113ms (115 modules)
+ [37m[1m○[22m[39m Compiling /users ...
+ [32m[1m✓[22m[39m Compiled /users in 1238ms (1213 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ GET /users [32m200[39m in 1265ms
+ [32m[1m✓[22m[39m Compiled / in 330ms (1218 modules)
+ GET / [32m200[39m in 521ms
+ [32m[1m✓[22m[39m Compiled /dashboard in 261ms (1221 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 467ms
+ GET / [32m200[39m in 49ms
+ GET /users [32m200[39m in 4691ms
+ GET /dashboard [32m200[39m in 3716ms
+ [32m[1m✓[22m[39m Compiled /stock in 378ms (1227 modules)
+ GET /stock [32m200[39m in 2206ms
+ GET /users [32m200[39m in 706ms
+ GET /stock [32m200[39m in 2102ms
+ GET /dashboard [32m200[39m in 1312ms
+ [32m[1m✓[22m[39m Compiled /products in 331ms (1236 modules)
+ GET /products [32m200[39m in 2495ms
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 399ms (1238 modules)
+ GET /products/grace_010/edit [32m200[39m in 1634ms
+ GET /products/grace_010/edit [32m200[39m in 1236ms
+ GET / [32m200[39m in 53ms
+ GET /dashboard [32m200[39m in 1311ms
+ GET /products [32m200[39m in 680ms
+ [32m[1m✓[22m[39m Compiled /products/new in 431ms (1240 modules)
+ GET /products/new [32m200[39m in 1271ms
+ GET /dashboard [32m200[39m in 2179ms
+ GET /users [32m200[39m in 691ms
+ GET /stock [32m200[39m in 1804ms
+ GET /dashboard [32m200[39m in 1125ms
+ [32m[1m✓[22m[39m Compiled in 1226ms (1253 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 176ms
+ GET /dashboard [32m200[39m in 2218ms
+ [31m[1m⨯[22m[39m Error: Cannot find module './426.js'
+Require stack:
+- /Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/webpack-runtime.js
+- /Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app/dashboard/page.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/require.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/load-components.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/utils.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/swc/options.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/swc/index.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/config.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next.js
+- /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js
+    at <unknown> (.next/server/app/products/page.js:2:14756)
+    at Object.<anonymous> (.next/server/app/products/page.js:2:14826) {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [36m[Array][39m,
+  page: [32m'/products'[39m
+}
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 678ms (1586 modules)
+ GET /products [31m500[39m in 1140ms
+ GET /products [32m200[39m in 570ms
+ GET /products [32m200[39m in 129ms
+ GET /products [32m200[39m in 1205ms
+ GET /stock [32m200[39m in 1881ms
+ GET /stock [32m200[39m in 819ms
+ [32m[1m✓[22m[39m Compiled / in 281ms (1103 modules)
+ GET / [32m200[39m in 507ms
+ GET /dashboard [32m200[39m in 1429ms
+^C[?25h

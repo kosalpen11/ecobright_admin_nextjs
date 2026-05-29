@@ -1,0 +1,187 @@
+> sh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+(node:8144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.3:3000
+
+ ✓ Starting...
+ ✓ Ready in 1513ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1506ms (1200 modules)
+ HEAD /login 200 in 1911ms
+ ✓ Compiled /_not-found in 458ms (1205 modules)
+ GET /login 404 in 656ms
+ ✓ Compiled / in 344ms (1197 modules)
+ GET / 200 in 467ms
+ GET / 200 in 600ms
+ GET /login 200 in 84ms
+ ✓ Compiled /middleware in 348ms (115 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1434ms (1544 modules)
+ GET /login 404 in 1038ms
+ GET /login 200 in 189ms
+prisma:error 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+[31m[auth][error][0m CallbackRouteError: Read more at https://errors.authjs.dev#callbackrouteerror
+[31m[auth][cause][0m: PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+    at ei.handleRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:7268)
+    at ei.handleAndLogRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6593)
+    at ei.request (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6300)
+    at async a (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:130:9551)
+    at async Object.authorize (webpack-internal:///(action-browser)/./auth.ts:43:30)
+    at async Module.callback (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/actions/callback/index.js:241:39)
+    at async AuthInternal (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/index.js:70:24)
+    at async Auth (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:130:34)
+    at async signIn (webpack-internal:///(action-browser)/../../node_modules/.pnpm/next-auth@5.0.0-beta.31_next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6__react@19.2.6/node_modules/next-auth/lib/actions.js:53:17)
+    at async loginAction (webpack-internal:///(action-browser)/./app/login/actions.ts:28:9)
+    at async executeActionAndPrepareForRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:3117)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:287
+    at async handleAction (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:32:22838)
+    at async renderToHTMLOrFlightImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:40020)
+    at async doRender (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:428:28)
+    at async AppPageRouteModule.handleResponse (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:41:57424)
+    at async handleResponse (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:580:32)
+    at async handler (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:958:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1430:9)
+    at async DevServer.renderPageComponent (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1482:24)
+    at async DevServer.renderToResponseImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1522:32)
+    at async DevServer.pipeImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:917:17)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:400:20
+    at async Span.traceAsyncFn (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:396:24)
+    at async invokeRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:437:24)
+    at async requestHandlerImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:485:13)
+    at async Server.requestListener (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js:226:13)
+[31m[auth][details][0m: {
+  "provider": "credentials"
+}
+ POST /login 200 in 3021ms
+ POST /login 200 in 127ms
+prisma:error 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+[31m[auth][error][0m CallbackRouteError: Read more at https://errors.authjs.dev#callbackrouteerror
+[31m[auth][cause][0m: PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+    at ei.handleRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:7268)
+    at ei.handleAndLogRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6593)
+    at ei.request (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6300)
+    at async a (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:130:9551)
+    at async Object.authorize (webpack-internal:///(action-browser)/./auth.ts:43:30)
+    at async Module.callback (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/actions/callback/index.js:241:39)
+    at async AuthInternal (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/index.js:70:24)
+    at async Auth (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:130:34)
+    at async signIn (webpack-internal:///(action-browser)/../../node_modules/.pnpm/next-auth@5.0.0-beta.31_next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6__react@19.2.6/node_modules/next-auth/lib/actions.js:53:17)
+    at async loginAction (webpack-internal:///(action-browser)/./app/login/actions.ts:28:9)
+    at async executeActionAndPrepareForRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:3117)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:287
+    at async handleAction (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:32:22838)
+    at async renderToHTMLOrFlightImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:40020)
+    at async doRender (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:428:28)
+    at async AppPageRouteModule.handleResponse (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:41:57424)
+    at async handleResponse (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:580:32)
+    at async handler (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:958:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1430:9)
+    at async DevServer.renderPageComponent (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1482:24)
+    at async DevServer.renderToResponseImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1522:32)
+    at async DevServer.pipeImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:917:17)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:400:20
+    at async Span.traceAsyncFn (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:396:24)
+    at async invokeRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:437:24)
+    at async requestHandlerImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:485:13)
+    at async Server.requestListener (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js:226:13)
+[31m[auth][details][0m: {
+  "provider": "credentials"
+}
+ POST /login 200 in 666ms
+ POST /login 404 in 72ms
+ GET /login 404 in 8ms
+ GET /login 404 in 16ms
+ GET /login 404 in 12ms
+ GET /login 404 in 13ms
+ GET /login 404 in 10ms
+ GET /login 404 in 8ms
+ GET /login 404 in 13ms
+ GET /login 404 in 10ms
+ GET /login 404 in 7ms
+ GET /login 404 in 9ms
+ GET /login 404 in 8ms
+ GET /login 404 in 11ms
+ GET /login 404 in 10ms
+ GET /login 404 in 8ms
+ GET /login 404 in 9ms
+ GET /login 404 in 7ms
+ GET /login 404 in 10ms
+ GET /login 404 in 10ms
+ ✓ Compiled in 1054ms (1558 modules)
+ GET /login 200 in 740ms
+prisma:error 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+[31m[auth][error][0m CallbackRouteError: Read more at https://errors.authjs.dev#callbackrouteerror
+[31m[auth][cause][0m: PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `users.email_verified` does not exist in the current database.
+    at ei.handleRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:7268)
+    at ei.handleAndLogRequestError (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6593)
+    at ei.request (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:121:6300)
+    at async a (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/@prisma+client@6.19.3_prisma@6.19.3_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/runtime/library.js:130:9551)
+    at async Object.authorize (webpack-internal:///(action-browser)/./auth.ts:43:30)
+    at async Module.callback (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/actions/callback/index.js:241:39)
+    at async AuthInternal (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/index.js:70:24)
+    at async Auth (webpack-internal:///(action-browser)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:130:34)
+    at async signIn (webpack-internal:///(action-browser)/../../node_modules/.pnpm/next-auth@5.0.0-beta.31_next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6__react@19.2.6/node_modules/next-auth/lib/actions.js:53:17)
+    at async loginAction (webpack-internal:///(action-browser)/./app/login/actions.ts:28:9)
+    at async executeActionAndPrepareForRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:3117)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:34:287
+    at async handleAction (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:32:22838)
+    at async renderToHTMLOrFlightImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:39:40020)
+    at async doRender (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:427:28)
+    at async AppPageRouteModule.handleResponse (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-page.runtime.dev.js:41:57424)
+    at async handleResponse (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:579:32)
+    at async handler (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Flogin%2Fpage&page=%2Flogin%2Fpage&appPaths=%2Flogin%2Fpage&pagePath=private-next-app-dir%2Flogin%2Fpage.tsx&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:957:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1430:9)
+    at async DevServer.renderPageComponent (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1482:24)
+    at async DevServer.renderToResponseImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1522:32)
+    at async DevServer.pipeImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:917:17)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:400:20
+    at async Span.traceAsyncFn (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:396:24)
+    at async invokeRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:437:24)
+    at async requestHandlerImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:485:13)
+    at async Server.requestListener (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js:226:13)
+[31m[auth][details][0m: {
+  "provider": "credentials"
+}
+ POST /login 200 in 663ms
+^C[?25h

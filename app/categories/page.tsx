@@ -55,7 +55,7 @@ export default async function CategoriesPage({
         title="Category Management"
         description="Paged category reads keep the screen fast and avoid loading unused counts."
         action={
-          <Link href="/categories/new" className="button-link">
+          <Link href="/categories/new" className="button-link text-white shadow-sm shadow-slate-900/15">
             New Category
           </Link>
         }

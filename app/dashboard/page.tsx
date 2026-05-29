@@ -130,7 +130,7 @@ export default async function DashboardPage() {
             <Link href="/stock" className="button-link">
               Record Stock
             </Link>
-            <Link href="/products" className="button-link secondary">
+            <Link href="/products" className="button-link">
               View Products
             </Link>
           </div>

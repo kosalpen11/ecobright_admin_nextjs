@@ -1,0 +1,25 @@
+> next build apps/admin
+
+   ▲ Next.js 15.5.18
+
+(node:6715) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:6876) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 2.9s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./auth.config.ts:26:9
+Type error: Type 'string | null | undefined' is not assignable to type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[0m [90m 24 |[39m         session[33m.[39muser[33m.[39mid [33m=[39m [33mString[39m(token[33m.[39mid)[33m;[39m
+ [90m 25 |[39m         session[33m.[39muser[33m.[39mname [33m=[39m token[33m.[39mname[33m;[39m
+[31m[1m>[22m[39m[90m 26 |[39m         session[33m.[39muser[33m.[39memail [33m=[39m token[33m.[39memail[33m;[39m
+ [90m    |[39m         [31m[1m^[22m[39m
+ [90m 27 |[39m         session[33m.[39muser[33m.[39mrole [33m=[39m token[33m.[39mrole [36mas[39m [32m"ADMIN"[39m [33m|[39m [32m"STAFF"[39m[33m;[39m
+ [90m 28 |[39m       }
+ [90m 29 |[39m[0m
+Next.js build worker exited with code: 1 and signal: null
