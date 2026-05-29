@@ -4,8 +4,12 @@
   "private": true,
   "packageManager": "pnpm@10.12.1",
   "scripts": {
+    "build": "nx build admin",
+    "dev": "nx dev admin",
     "nx": "nx",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "prisma:generate": "prisma generate",
+    "seed": "prisma db seed"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.10.0",

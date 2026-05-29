@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx dev admin",
-    "startTime": "2026-05-29T16:41:41.937Z",
-    "endTime": "2026-05-29T16:47:47.985Z",
+    "startTime": "2026-05-29T16:35:15.760Z",
+    "endTime": "2026-05-29T16:59:37.244Z",
     "inner": false
   },
   "tasks": [
@@ -11,8 +11,8 @@
       "target": "dev",
       "projectName": "admin",
       "hash": "14741464131375941545",
-      "startTime": "2026-05-29T16:41:41.983Z",
-      "endTime": "2026-05-29T16:47:47.960Z",
+      "startTime": "2026-05-29T16:35:15.820Z",
+      "endTime": "2026-05-29T16:59:37.231Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
