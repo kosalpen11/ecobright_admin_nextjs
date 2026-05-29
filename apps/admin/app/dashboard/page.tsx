@@ -163,7 +163,7 @@ export default async function DashboardPage() {
                           tone={
                             movement.type === "OUT"
                               ? "warning"
-                              : movement.type === "ADJUST"
+                              : movement.type === "ADJUSTMENT"
                                 ? "default"
                                 : "success"
                           }

@@ -15,7 +15,7 @@ enum UserRole {
 enum StockMovementType {
   IN
   OUT
-  ADJUST
+  ADJUSTMENT
 }
 
 model User {

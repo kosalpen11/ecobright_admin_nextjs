@@ -63,9 +63,9 @@ export async function createStockMovementAction(formData: FormData) {
         data: {
           productId: product.id,
           type: movementType,
-          quantity: movementType === StockMovementType.ADJUST
-            ? Math.abs(nextStockQty - previousStock)
-            : requestedQty,
+          quantity: movementType === StockMovementType.ADJUSTMENT
+          ? Math.abs(nextStockQty - previousStock)
+          : requestedQty,
           previousStock,
           newStock: nextStockQty,
           note: parsed.data.note || null,

@@ -38,7 +38,7 @@ export default async function StockPage({
 
   if (type && type !== "all") {
     movementAnd.push({
-      type: type as "IN" | "OUT" | "ADJUST"
+      type: type as "IN" | "OUT" | "ADJUSTMENT"
     });
   }
 
@@ -192,7 +192,7 @@ export default async function StockPage({
                   <Select id="type" name="type" defaultValue="IN" required>
                     <option value="IN">IN</option>
                     <option value="OUT">OUT</option>
-                    <option value="ADJUST">ADJUST</option>
+                    <option value="ADJUSTMENT">ADJUST</option>
                   </Select>
                 </div>
                 <div className="space-y-2">
@@ -242,7 +242,7 @@ export default async function StockPage({
                   <option value="all">All</option>
                   <option value="IN">IN</option>
                   <option value="OUT">OUT</option>
-                  <option value="ADJUST">ADJUST</option>
+                  <option value="ADJUSTMENT">ADJUST</option>
                 </Select>
               </div>
               <div className="space-y-2">
@@ -301,7 +301,7 @@ export default async function StockPage({
                               tone={
                                 movement.type === "OUT"
                                   ? "warning"
-                                  : movement.type === "ADJUST"
+                                  : movement.type === "ADJUSTMENT"
                                     ? "default"
                                     : "success"
                               }
