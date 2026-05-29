@@ -16,232 +16,16 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".env.example",
-        "hash": "9401252257637897585"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11549028915749872110"
-      },
-      {
-        "file": "README.md",
-        "hash": "1972833708268979957"
-      },
-      {
-        "file": "app/api/auth/[...nextauth]/route.ts",
-        "hash": "6898140225989190846"
-      },
-      {
-        "file": "app/categories/[id]/edit/page.tsx",
-        "hash": "12254596825180428131"
-      },
-      {
-        "file": "app/categories/actions.ts",
-        "hash": "10357369444958816205"
-      },
-      {
         "file": "app/categories/loading.tsx",
         "hash": "12597397485031620478"
-      },
-      {
-        "file": "app/categories/new/page.tsx",
-        "hash": "1093154357690705197"
-      },
-      {
-        "file": "app/categories/page.tsx",
-        "hash": "5826296510801892069"
-      },
-      {
-        "file": "app/dashboard/loading.tsx",
-        "hash": "15738955575395175709"
-      },
-      {
-        "file": "app/dashboard/page.tsx",
-        "hash": "12684176106554463678"
-      },
-      {
-        "file": "app/globals.css",
-        "hash": "15190514486906575849"
-      },
-      {
-        "file": "app/layout.tsx",
-        "hash": "8095656205990137197"
-      },
-      {
-        "file": "app/loading.tsx",
-        "hash": "1787366675085198735"
-      },
-      {
-        "file": "app/login/actions.ts",
-        "hash": "450511470123769640"
-      },
-      {
-        "file": "app/login/login-form.tsx",
-        "hash": "5102001988422833731"
-      },
-      {
-        "file": "app/login/page.tsx",
-        "hash": "12318197704518638318"
-      },
-      {
-        "file": "app/page.tsx",
-        "hash": "13997629557473255146"
-      },
-      {
-        "file": "app/products/[id]/edit/page.tsx",
-        "hash": "622457543205727165"
-      },
-      {
-        "file": "app/products/actions.ts",
-        "hash": "16749103180381935154"
-      },
-      {
-        "file": "app/products/loading.tsx",
-        "hash": "1144347044093807063"
-      },
-      {
-        "file": "app/products/new/page.tsx",
-        "hash": "14138423822509606368"
-      },
-      {
-        "file": "app/products/page.tsx",
-        "hash": "13275752192973780667"
-      },
-      {
-        "file": "app/stock/actions.ts",
-        "hash": "2135734311041691131"
-      },
-      {
-        "file": "app/stock/loading.tsx",
-        "hash": "12711401595768591264"
-      },
-      {
-        "file": "app/stock/page.tsx",
-        "hash": "5802453862308859718"
-      },
-      {
-        "file": "app/users/[id]/password/page.tsx",
-        "hash": "8946858091908998139"
-      },
-      {
-        "file": "app/users/actions.ts",
-        "hash": "5448144855483962914"
-      },
-      {
-        "file": "app/users/loading.tsx",
-        "hash": "14704291170915000388"
-      },
-      {
-        "file": "app/users/page.tsx",
-        "hash": "14908856597035482258"
-      },
-      {
-        "file": "auth.config.ts",
-        "hash": "12584305710574266971"
-      },
-      {
-        "file": "auth.ts",
-        "hash": "10878774800605250630"
-      },
-      {
-        "file": "components/admin-shell.tsx",
-        "hash": "10463798594999799646"
-      },
-      {
-        "file": "components/logout-button.tsx",
-        "hash": "15788870364518979343"
-      },
-      {
-        "file": "components/product-images.tsx",
-        "hash": "15092385124423476567"
-      },
-      {
-        "file": "components/ui.tsx",
-        "hash": "11851920123379186421"
-      },
-      {
-        "file": "lib/auth.ts",
-        "hash": "13498470831015794617"
-      },
-      {
-        "file": "lib/pagination.ts",
-        "hash": "1785737517654585997"
-      },
-      {
-        "file": "lib/prisma.ts",
-        "hash": "5570291241908635247"
-      },
-      {
-        "file": "lib/session.ts",
-        "hash": "7811655868034793481"
-      },
-      {
-        "file": "lib/validations/auth.ts",
-        "hash": "5156304549172530603"
-      },
-      {
-        "file": "lib/validations/category.ts",
-        "hash": "15389517637833189260"
-      },
-      {
-        "file": "lib/validations/product.ts",
-        "hash": "9430386854289067875"
-      },
-      {
-        "file": "lib/validations/stock.ts",
-        "hash": "2803215379887266315"
-      },
-      {
-        "file": "lib/validations/user.ts",
-        "hash": "3599548002284514272"
-      },
-      {
-        "file": "middleware.ts",
-        "hash": "3192554020164481334"
-      },
-      {
-        "file": "netlify.yml",
-        "hash": "16456295891649340454"
-      },
-      {
-        "file": "next-env.d.ts",
-        "hash": "2517811901510882550"
-      },
-      {
-        "file": "next.config.ts",
-        "hash": "2631239752477163793"
       },
       {
         "file": "nx.json",
         "hash": "8421952385421462872"
       },
       {
-        "file": "package-lock.json",
-        "hash": "14898107236051299300"
-      },
-      {
-        "file": "package.json",
-        "hash": "17911734438890192566"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "18362449323110739766"
-      },
-      {
-        "file": "pnpm-workspace.yaml",
-        "hash": "9750177317466281158"
-      },
-      {
-        "file": "postcss.config.js",
-        "hash": "17789872283383255573"
-      },
-      {
-        "file": "prisma.config.ts",
-        "hash": "15055080307363046130"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "5864000276805569573"
+        "file": "app/users/loading.tsx",
+        "hash": "14704291170915000388"
       },
       {
         "file": "prisma/seed.ts",
@@ -252,16 +36,232 @@
         "hash": "14919173605276702829"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "10085993725876532954"
+        "file": "app/categories/page.tsx",
+        "hash": "5826296510801892069"
+      },
+      {
+        "file": "components/logout-button.tsx",
+        "hash": "15788870364518979343"
+      },
+      {
+        "file": "README.md",
+        "hash": "1972833708268979957"
+      },
+      {
+        "file": "app/login/actions.ts",
+        "hash": "450511470123769640"
+      },
+      {
+        "file": "components/admin-shell.tsx",
+        "hash": "10463798594999799646"
+      },
+      {
+        "file": "lib/pagination.ts",
+        "hash": "1785737517654585997"
+      },
+      {
+        "file": "prisma.config.ts",
+        "hash": "15055080307363046130"
+      },
+      {
+        "file": "app/categories/new/page.tsx",
+        "hash": "1093154357690705197"
       },
       {
         "file": "tsconfig.json",
         "hash": "2582944569798175961"
       },
       {
+        "file": "lib/validations/product.ts",
+        "hash": "9430386854289067875"
+      },
+      {
+        "file": "app/users/[id]/password/page.tsx",
+        "hash": "8946858091908998139"
+      },
+      {
+        "file": "auth.config.ts",
+        "hash": "12584305710574266971"
+      },
+      {
+        "file": "auth.ts",
+        "hash": "10878774800605250630"
+      },
+      {
+        "file": "pnpm-workspace.yaml",
+        "hash": "9750177317466281158"
+      },
+      {
+        "file": ".env.example",
+        "hash": "9401252257637897585"
+      },
+      {
+        "file": "app/categories/[id]/edit/page.tsx",
+        "hash": "12254596825180428131"
+      },
+      {
+        "file": "components/ui.tsx",
+        "hash": "11851920123379186421"
+      },
+      {
+        "file": "app/page.tsx",
+        "hash": "13997629557473255146"
+      },
+      {
+        "file": "postcss.config.js",
+        "hash": "17789872283383255573"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "5864000276805569573"
+      },
+      {
+        "file": "app/users/actions.ts",
+        "hash": "5448144855483962914"
+      },
+      {
+        "file": "lib/validations/stock.ts",
+        "hash": "2803215379887266315"
+      },
+      {
+        "file": "app/dashboard/loading.tsx",
+        "hash": "15738955575395175709"
+      },
+      {
+        "file": "app/login/page.tsx",
+        "hash": "12318197704518638318"
+      },
+      {
+        "file": "lib/auth.ts",
+        "hash": "13498470831015794617"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14898107236051299300"
+      },
+      {
+        "file": "app/stock/page.tsx",
+        "hash": "5802453862308859718"
+      },
+      {
+        "file": "package.json",
+        "hash": "17911734438890192566"
+      },
+      {
+        "file": "app/globals.css",
+        "hash": "15190514486906575849"
+      },
+      {
+        "file": "app/products/actions.ts",
+        "hash": "16749103180381935154"
+      },
+      {
+        "file": "app/products/page.tsx",
+        "hash": "13275752192973780667"
+      },
+      {
+        "file": "app/layout.tsx",
+        "hash": "8095656205990137197"
+      },
+      {
+        "file": "next-env.d.ts",
+        "hash": "2517811901510882550"
+      },
+      {
+        "file": "app/loading.tsx",
+        "hash": "1787366675085198735"
+      },
+      {
         "file": "types/next-auth.d.ts",
         "hash": "8753397867414584301"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "18362449323110739766"
+      },
+      {
+        "file": "lib/validations/auth.ts",
+        "hash": "5156304549172530603"
+      },
+      {
+        "file": "app/api/auth/[...nextauth]/route.ts",
+        "hash": "6898140225989190846"
+      },
+      {
+        "file": "app/products/loading.tsx",
+        "hash": "1144347044093807063"
+      },
+      {
+        "file": "app/products/new/page.tsx",
+        "hash": "14138423822509606368"
+      },
+      {
+        "file": "lib/validations/user.ts",
+        "hash": "3599548002284514272"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11549028915749872110"
+      },
+      {
+        "file": "components/product-images.tsx",
+        "hash": "15092385124423476567"
+      },
+      {
+        "file": "next.config.ts",
+        "hash": "2631239752477163793"
+      },
+      {
+        "file": "netlify.yml",
+        "hash": "16456295891649340454"
+      },
+      {
+        "file": "app/products/[id]/edit/page.tsx",
+        "hash": "622457543205727165"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10085993725876532954"
+      },
+      {
+        "file": "middleware.ts",
+        "hash": "3192554020164481334"
+      },
+      {
+        "file": "app/login/login-form.tsx",
+        "hash": "5102001988422833731"
+      },
+      {
+        "file": "app/stock/actions.ts",
+        "hash": "2135734311041691131"
+      },
+      {
+        "file": "lib/session.ts",
+        "hash": "7811655868034793481"
+      },
+      {
+        "file": "app/dashboard/page.tsx",
+        "hash": "12684176106554463678"
+      },
+      {
+        "file": "app/users/page.tsx",
+        "hash": "14908856597035482258"
+      },
+      {
+        "file": "lib/validations/category.ts",
+        "hash": "15389517637833189260"
+      },
+      {
+        "file": "lib/prisma.ts",
+        "hash": "5570291241908635247"
+      },
+      {
+        "file": "app/categories/actions.ts",
+        "hash": "10357369444958816205"
+      },
+      {
+        "file": "app/stock/loading.tsx",
+        "hash": "12711401595768591264"
       }
     ],
     "projectFileMap": {
@@ -336,7 +336,7 @@
         },
         {
           "file": "apps/admin/actions/stock.ts",
-          "hash": "2175317743757273475"
+          "hash": "2179813178450396830"
         },
         {
           "file": "apps/admin/actions/users.ts",

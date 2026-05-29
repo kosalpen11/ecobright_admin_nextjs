@@ -26,6 +26,7 @@ export async function createStockMovementAction(formData: FormData) {
 
   try {
     await db.$transaction(async (tx) => {
+      const movementType = parsed.data.type as StockMovementType;
       const product = await tx.product.findUnique({
         where: { id: parsed.data.productId },
         select: {
@@ -42,9 +43,9 @@ export async function createStockMovementAction(formData: FormData) {
       const previousStock = product.stockQty;
       let nextStockQty = product.stockQty;
 
-      if (parsed.data.type === StockMovementType.IN) {
+      if (movementType === StockMovementType.IN) {
         nextStockQty = product.stockQty + requestedQty;
-      } else if (parsed.data.type === StockMovementType.OUT) {
+      } else if (movementType === StockMovementType.OUT) {
         if (product.stockQty < requestedQty) {
           throw new Error("Not enough stock for this movement.");
         }
@@ -61,8 +62,8 @@ export async function createStockMovementAction(formData: FormData) {
       await tx.stockMovement.create({
         data: {
           productId: product.id,
-          type: parsed.data.type,
-          quantity: parsed.data.type === StockMovementType.ADJUST
+          type: movementType,
+          quantity: movementType === StockMovementType.ADJUST
             ? Math.abs(nextStockQty - previousStock)
             : requestedQty,
           previousStock,
