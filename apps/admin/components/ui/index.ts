@@ -5,6 +5,8 @@ export * from "./confirm-dialog";
 export * from "./dialog";
 export * from "./dropdown-menu";
 export * from "./input";
+export * from "./label";
 export * from "./select";
+export * from "./skeleton";
 export * from "./table";
 export * from "./textarea";

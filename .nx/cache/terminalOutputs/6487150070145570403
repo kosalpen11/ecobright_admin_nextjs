@@ -1,0 +1,152 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1580ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 1017ms (968 modules)
+ GET / [32m200[39m in 1456ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [37m[1m○[22m[39m Compiling /login ...
+ [32m[1m✓[22m[39m Compiled /login in 813ms (1028 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /login [32m200[39m in 1058ms
+ GET /login [32m200[39m in 40ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 388ms (1016 modules)
+ GET /api/auth/providers [32m200[39m in 993ms
+ GET /api/auth/csrf [32m200[39m in 8ms
+ POST /api/auth/callback/credentials? [32m200[39m in 3592ms
+ [32m[1m✓[22m[39m Compiled /middleware in 98ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 705ms (1259 modules)
+ GET /dashboard [32m200[39m in 4515ms
+ GET /dashboard [32m200[39m in 3630ms
+ [32m[1m✓[22m[39m Compiled /products in 378ms (1280 modules)
+ GET /products [32m200[39m in 1178ms
+ [32m[1m✓[22m[39m Compiled /products/new in 265ms (1282 modules)
+ GET /products/new [32m200[39m in 932ms
+ GET /products [32m200[39m in 948ms
+ POST /products/new [34m303[39m in 2377ms
+ GET /products [32m200[39m in 662ms
+ POST /products [34m303[39m in 1262ms
+ GET /products [32m200[39m in 938ms
+ POST /products [34m303[39m in 1794ms
+[31mprisma:error[39m 
+Invalid `prisma.product.delete()` invocation:
+
+
+Foreign key constraint violated on the constraint: `stock_movements_product_id_fkey`
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 391ms
+ POST /products [34m303[39m in 699ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 649ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 928ms
+[31mprisma:error[39m 
+Invalid `prisma.product.delete()` invocation:
+
+
+Foreign key constraint violated on the constraint: `stock_movements_product_id_fkey`
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 683ms
+ POST /products?error=Product%20cannot%20be%20deleted%20while%20stock%20history%20exists [34m303[39m in 1264ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 392ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 661ms
+[31mprisma:error[39m 
+Invalid `prisma.product.delete()` invocation:
+
+
+Foreign key constraint violated on the constraint: `stock_movements_product_id_fkey`
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 1010ms
+ POST /products?error=Product%20cannot%20be%20deleted%20while%20stock%20history%20exists [34m303[39m in 1303ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 402ms
+ GET /products?error=Product+cannot+be+deleted+while+stock+history+exists [32m200[39m in 674ms
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 514ms (1277 modules)
+ GET /products/grace_211/edit [32m200[39m in 2132ms
+ GET /products [32m200[39m in 1111ms
+ POST /products/grace_211/edit [34m303[39m in 2227ms
+ GET /products [32m200[39m in 812ms
+ GET /login?callbackUrl=%2Fproducts [32m200[39m in 176ms
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ [32m[1m✓[22m[39m Compiled /_not-found in 1038ms (1282 modules)
+ GET /apple-touch-icon.png [33m404[39m in 1230ms
+ GET /apple-touch-icon-precomposed.png [33m404[39m in 1235ms
+ GET /login?callbackUrl=%2Fproducts [32m200[39m in 99ms
+ GET /login?callbackUrl=%2Fdashboard [32m200[39m in 33ms
+ GET /login?callbackUrl=%2Fproducts [32m200[39m in 47ms
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+ [32m[1m✓[22m[39m Compiled in 2.5s (1403 modules)
+ [32m[1m✓[22m[39m Compiled in 721ms (1329 modules)
+ [32m[1m✓[22m[39m Compiled in 182ms (386 modules)
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'[39m
+}
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/5.pack.gz'[39m
+}
+<w> [1m[33m[webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/4.pack.gz'[39m[22m
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'[39m
+}
+<w> [1m[33m[webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/5.pack.gz'[39m[22m
+^C[?25h

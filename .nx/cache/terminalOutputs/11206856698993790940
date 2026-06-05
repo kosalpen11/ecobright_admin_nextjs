@@ -1,0 +1,24 @@
+> sh -c 'rm -rf apps/admin/.next-build && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'
+
+   ▲ Next.js 15.5.18
+
+(node:4399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:4439) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 7.1s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/categories/page.tsx:107:38
+Type error: Type '"secondary"' is not assignable to type '"default" | "success" | "warning" | "destructive" | null | undefined'.
+
+[0m [90m 105 |[39m                             [33m<[39m[33mspan[39m[33m>[39m{usageMap[33m.[39m[36mget[39m(category[33m.[39mslug) [33m?[39m[33m?[39m [35m0[39m}[33m<[39m[33m/[39m[33mspan[39m[33m>[39m
+ [90m 106 |[39m                             {(usageMap[33m.[39m[36mget[39m(category[33m.[39mslug) [33m?[39m[33m?[39m [35m0[39m) [33m>[39m [35m0[39m [33m?[39m (
+[31m[1m>[22m[39m[90m 107 |[39m                               [33m<[39m[33mBadge[39m variant[33m=[39m[32m"secondary"[39m[33m>[39m[33mReferenced[39m[33m<[39m[33m/[39m[33mBadge[39m[33m>[39m
+ [90m     |[39m                                      [31m[1m^[22m[39m
+ [90m 108 |[39m                             ) [33m:[39m (
+ [90m 109 |[39m                               [33m<[39m[33mBadge[39m variant[33m=[39m[32m"outline"[39m[33m>[39m[33mUnused[39m[33m<[39m[33m/[39m[33mBadge[39m[33m>[39m
+ [90m 110 |[39m                             )}[0m
+Next.js build worker exited with code: 1 and signal: null

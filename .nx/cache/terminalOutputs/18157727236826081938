@@ -1,0 +1,78 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1437ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.6s (1005 modules)
+ GET / [32m200[39m in 3104ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 199ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1201ms (1265 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1499ms
+ GET /dashboard [32m200[39m in 4663ms
+ [32m[1m✓[22m[39m Compiled /products in 494ms (1291 modules)
+ GET /products [32m200[39m in 1244ms
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 420ms (1317 modules)
+ GET /products/Grace_T8-Glass/edit [32m200[39m in 2469ms
+ GET /products/solar-flood-light/edit [32m200[39m in 3215ms
+[31mprisma:error[39m 
+Invalid `prisma.productAttributeValue.upsert()` invocation:
+
+
+Transaction API error: Transaction already closed: A query cannot be executed on an expired transaction. The timeout for this transaction was 5000 ms, however 5270 ms passed since the start of the transaction. Consider increasing the interactive transaction timeout or doing less work in the transaction.
+ GET /products/solar-flood-light/edit?error=%0AInvalid+%60prisma.productAttributeValue.upsert%28%29%60+invocation%3A%0A%0A%0ATransaction+API+error%3A+Transaction+already+closed%3A+A+query+cannot+be+executed+on+an+expired+transaction.+The+timeout+for+this+transaction+was+5000+ms%2C+however+5270+ms+passed+since+the+start+of+the+transaction.+Consider+increasing+the+interactive+transaction+timeout+or+doing+less+work+in+the+transaction. [32m200[39m in 2749ms
+ POST /products/solar-flood-light/edit [34m303[39m in 9205ms
+ GET /products/solar-flood-light/edit?error=%0AInvalid+%60prisma.productAttributeValue.upsert%28%29%60+invocation%3A%0A%0A%0ATransaction+API+error%3A+Transaction+already+closed%3A+A+query+cannot+be+executed+on+an+expired+transaction.+The+timeout+for+this+transaction+was+5000+ms%2C+however+5270+ms+passed+since+the+start+of+the+transaction.+Consider+increasing+the+interactive+transaction+timeout+or+doing+less+work+in+the+transaction. [32m200[39m in 1375ms
+ GET /products/solar-flood-light/edit?error=%0AInvalid+%60prisma.productAttributeValue.upsert%28%29%60+invocation%3A%0A%0A%0ATransaction+API+error%3A+Transaction+already+closed%3A+A+query+cannot+be+executed+on+an+expired+transaction.+The+timeout+for+this+transaction+was+5000+ms%2C+however+5270+ms+passed+since+the+start+of+the+transaction.+Consider+increasing+the+interactive+transaction+timeout+or+doing+less+work+in+the+transaction. [32m200[39m in 2927ms
+ GET /products/Grace_T8-Glass/edit?error=%0AInvalid%20%60prisma.productAttribute.upsert()%60%20invocation%3A%0A%0A%0ANull%20constraint%20violation%20on%20the%20fields%3A%20(%60slug%60) [32m200[39m in 1053ms
+ GET /dashboard [32m200[39m in 65ms
+ GET /dashboard [32m200[39m in 897ms
+ [32m[1m✓[22m[39m Compiled in 442ms (1327 modules)
+ GET /dashboard [32m200[39m in 1088ms
+ GET /products/Grace_T8-Glass/edit?error=%0AInvalid+%60prisma.productAttribute.upsert%28%29%60+invocation%3A%0A%0A%0ANull+constraint+violation+on+the+fields%3A+%28%60slug%60%29 [32m200[39m in 1621ms
+ GET /products/solar-flood-light/edit?error=%0AInvalid+%60prisma.productAttributeValue.upsert%28%29%60+invocation%3A%0A%0A%0ATransaction+API+error%3A+Transaction+already+closed%3A+A+query+cannot+be+executed+on+an+expired+transaction.+The+timeout+for+this+transaction+was+5000+ms%2C+however+5270+ms+passed+since+the+start+of+the+transaction.+Consider+increasing+the+interactive+transaction+timeout+or+doing+less+work+in+the+transaction. [32m200[39m in 1925ms
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'[39m
+}
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/2.pack.gz'[39m
+}
+<w> [1m[33m[webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/server-development/1.pack.gz'[39m[22m
+^C[?25h

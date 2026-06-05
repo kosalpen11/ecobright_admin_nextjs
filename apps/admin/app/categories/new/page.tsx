@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createCategoryAction } from "@/actions/categories";
+import { ActionForm } from "@/components/action-form";
 import { AdminShell } from "@/components/admin-shell";
 import { PageHeader, QueryError, SectionCard } from "@/components/page-shell";
 import { Button, Input, Textarea } from "@/components/ui";
@@ -18,6 +19,10 @@ export default async function NewCategoryPage({
       <PageHeader
         title="New Category"
         description="Create a controlled category row for product normalization."
+        breadcrumbs={[
+          { label: "Categories", href: "/categories" },
+          { label: "New Category" }
+        ]}
         action={
           <Button asChild variant="outline">
             <Link href="/categories">Back to Categories</Link>
@@ -26,7 +31,12 @@ export default async function NewCategoryPage({
       />
 
       <SectionCard title="Category Details" description="Use a stable slug. Product rows reference it directly.">
-        <form action={createCategoryAction} className="max-w-2xl space-y-5">
+        <ActionForm
+          action={createCategoryAction}
+          className="max-w-2xl space-y-5"
+          pendingTitle="Creating category"
+          pendingDescription="The category is being inserted and prepared for product assignment."
+        >
           <QueryError error={error} />
 
           <div className="space-y-2">
@@ -56,7 +66,7 @@ export default async function NewCategoryPage({
               <Link href="/categories">Cancel</Link>
             </Button>
           </div>
-        </form>
+        </ActionForm>
       </SectionCard>
     </AdminShell>
   );

@@ -1,92 +1,104 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Eye, EyeOff, LockKeyhole, Mail } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
 import { signIn } from "next-auth/react";
-import { LockKeyhole, Mail } from "lucide-react";
+import { toast } from "sonner";
 import { loginSchema } from "@eco-bright/validators/auth";
-import { Button, Input } from "@/components/ui";
+import { FormFieldError } from "@/components/form-field-error";
+import { LoadingButton } from "@/components/loading-button";
+import { Input } from "@/components/ui";
+
+type LoginValues = {
+  email: string;
+  password: string;
+};
 
 export function LoginForm() {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
-  const [error, setError] = useState<string | null>(null);
+  const [showPassword, setShowPassword] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm<LoginValues>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: {
+      email: "",
+      password: ""
+    }
+  });
 
-  function handleSubmit(formData: FormData) {
+  const onSubmit = handleSubmit((values) => {
     startTransition(async () => {
-      setError(null);
-
-      const parsed = loginSchema.safeParse({
-        email: formData.get("email"),
-        password: formData.get("password")
-      });
-
-      if (!parsed.success) {
-        setError(parsed.error.issues[0]?.message ?? "Invalid login details.");
-        return;
-      }
-
       const result = await signIn("credentials", {
-        email: parsed.data.email,
-        password: parsed.data.password,
+        email: values.email,
+        password: values.password,
         redirect: false
       });
 
       if (!result || result.error) {
-        setError("Invalid email or password.");
+        toast.error("Invalid email or password.");
         return;
       }
 
+      toast.success("Signed in.");
       router.push("/dashboard");
       router.refresh();
     });
-  }
+  });
 
   return (
-    <form action={handleSubmit} className="space-y-4">
+    <form onSubmit={onSubmit} className="space-y-4">
       <div className="space-y-2">
         <label htmlFor="email" className="text-sm font-medium text-slate-700">
-          Email
+          Email <span className="text-red-500">*</span>
         </label>
         <div className="relative">
           <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           <Input
             id="email"
-            name="email"
             type="email"
             autoComplete="email"
-            required
             className="pl-9"
+            {...register("email")}
           />
         </div>
+        <FormFieldError message={errors.email?.message} />
       </div>
 
       <div className="space-y-2">
         <label htmlFor="password" className="text-sm font-medium text-slate-700">
-          Password
+          Password <span className="text-red-500">*</span>
         </label>
         <div className="relative">
           <LockKeyhole className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
           <Input
             id="password"
-            name="password"
-            type="password"
+            type={showPassword ? "text" : "password"}
             autoComplete="current-password"
-            required
-            className="pl-9"
+            className="pl-9 pr-10"
+            {...register("password")}
           />
+          <button
+            type="button"
+            onClick={() => setShowPassword((current) => !current)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 transition-colors hover:text-slate-700"
+            aria-label={showPassword ? "Hide password" : "Show password"}
+          >
+            {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+          </button>
         </div>
+        <FormFieldError message={errors.password?.message} />
       </div>
 
-      {error ? (
-        <p className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
-          {error}
-        </p>
-      ) : null}
-
-      <Button type="submit" className="w-full" disabled={pending}>
-        {pending ? "Signing in..." : "Sign in"}
-      </Button>
+      <LoadingButton type="submit" className="w-full" loading={pending}>
+        Sign in
+      </LoadingButton>
     </form>
   );
 }

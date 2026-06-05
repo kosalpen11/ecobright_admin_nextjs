@@ -13,7 +13,7 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "sh -c 'rm -rf apps/admin/.next && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next build'"
+        "command": "sh -c 'rm -rf apps/admin/.next-build && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'"
       }
     }
   }

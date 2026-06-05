@@ -1,0 +1,149 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+ [33m[1m⚠[22m[39m Port 3000 is in use by process 73992, using available port 3001 instead.
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.5:3001
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1554ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.7s (1005 modules)
+ GET / [32m200[39m in 3210ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 199ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1259ms (1265 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1554ms
+[Error: aborted] { code: [32m'ECONNRESET'[39m }
+ GET / [32m200[39m in 205ms
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 926ms (1598 modules)
+ GET /dashboard [32m200[39m in 3614ms
+ [32m[1m✓[22m[39m Compiled /products in 434ms (1638 modules)
+ GET /products [32m200[39m in 1194ms
+ [32m[1m✓[22m[39m Compiled /categories in 298ms (1644 modules)
+ GET /categories [32m200[39m in 2107ms
+ [37m[1m○[22m[39m Compiling /stock ...
+ [32m[1m✓[22m[39m Compiled /stock in 685ms (1707 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., title: ..., category: "light", categoryLabel: ..., useCase: ..., description: ..., imageUrl: ..., price: Decimal, oldPrice: ..., badge: ..., tags: ..., currency: ..., inStock: ..., sortOrder: ..., isActive: ..., titleKm: ..., categoryLabelKm: ..., useCaseKm: ..., descriptionKm: ..., rawCategory: ..., packQty: ..., holeSize: ..., needsReview: ..., reviewFlags: ..., imageUrls: ..., stockQty: ..., createdById: ..., createdAt: ..., updatedAt: ..., variants: ...}
+                                                                                                                     ^^^^^^^
+ GET /stock [32m200[39m in 2034ms
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ [32m[1m✓[22m[39m Compiled /_not-found in 961ms (1712 modules)
+ GET /apple-touch-icon.png [33m404[39m in 1207ms
+ GET /apple-touch-icon-precomposed.png [33m404[39m in 1225ms
+ [32m[1m✓[22m[39m Compiled in 530ms (1626 modules)
+ GET /stock [32m200[39m in 1564ms
+ GET /categories [32m200[39m in 872ms
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app-paths-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app-paths-manifest.json'[39m,
+  page: [32m'/products'[39m
+}
+ [32m[1m✓[22m[39m Compiled /_error in 441ms (1708 modules)
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'[39m
+}
+[Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app-paths-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app-paths-manifest.json'[39m,
+  page: [32m'/products'[39m
+}
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'[39m
+}
+[Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m
+}
+ GET /products [31m500[39m in 2451ms
+ GET /products [31m500[39m in 29ms
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app/products/page.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app/products/page.js'[39m,
+  page: [32m'/products'[39m
+}
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'[39m
+}
+[Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app/products/page.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/app/products/page.js'[39m,
+  page: [32m'/products'[39m
+}
+ [31m[1m⨯[22m[39m [Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/server/pages/_document.js'[39m
+}
+[Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m
+}
+ GET /products [31m500[39m in 85ms
+ GET /products [31m500[39m in 30ms
+ [31m[1m⨯[22m[39m Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'
+    at async L (.next/server/app/products/page.js:1:3070) {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m,
+  page: [32m'/products'[39m
+}
+ [31m[1m⨯[22m[39m Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'
+    at async (.next/server/pages/_error.js:19:6677) {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m
+}
+Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'
+    at async L (.next/server/app/products/page.js:1:3070) {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m,
+  page: [32m'/products'[39m
+}
+ [31m[1m⨯[22m[39m Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'
+    at async (.next/server/pages/_error.js:19:6677) {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m
+}
+[Error: ENOENT: no such file or directory, open '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'open'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/routes-manifest.json'[39m
+}
+ GET /products [31m500[39m in 843ms
+ GET /products [31m500[39m in 244ms
+^C[?25h

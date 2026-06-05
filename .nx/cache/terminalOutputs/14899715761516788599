@@ -1,0 +1,28 @@
+> sh -c 'rm -rf apps/admin/.next && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next build'
+
+   ▲ Next.js 15.5.18
+
+(node:72770) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:72807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 5.6s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./actions/products.ts:354:11
+Type error: Argument of type '{ price: number; stockQty: number; attributeSelections: { value: string; attributeName: string; }[]; id?: string | undefined; isActive?: boolean | undefined; imageUrl?: string | undefined; oldPrice?: number | ... 1 more ... | undefined; sku?: string | undefined; }[]' is not assignable to parameter of type '{ isActive: boolean; price: number; stockQty: number; attributeSelections: { value: string; attributeName: string; }[]; id?: string | undefined; imageUrl?: string | undefined; oldPrice?: number | null | undefined; sku?: string | undefined; }[]'.
+  Type '{ price: number; stockQty: number; attributeSelections: { value: string; attributeName: string; }[]; id?: string | undefined; isActive?: boolean | undefined; imageUrl?: string | undefined; oldPrice?: number | ... 1 more ... | undefined; sku?: string | undefined; }' is not assignable to type '{ isActive: boolean; price: number; stockQty: number; attributeSelections: { value: string; attributeName: string; }[]; id?: string | undefined; imageUrl?: string | undefined; oldPrice?: number | null | undefined; sku?: string | undefined; }'.
+    Types of property 'isActive' are incompatible.
+      Type 'boolean | undefined' is not assignable to type 'boolean'.
+        Type 'undefined' is not assignable to type 'boolean'.
+
+[0m [90m 352 |[39m           tx[33m,[39m
+ [90m 353 |[39m           submission[33m.[39mproduct[33m.[39mid[33m,[39m
+[31m[1m>[22m[39m[90m 354 |[39m           submission[33m.[39mvariants
+ [90m     |[39m           [31m[1m^[22m[39m
+ [90m 355 |[39m         )[33m;[39m
+ [90m 356 |[39m
+ [90m 357 |[39m         [36mawait[39m tx[33m.[39mproduct[33m.[39mupdate({[0m
+Next.js build worker exited with code: 1 and signal: null

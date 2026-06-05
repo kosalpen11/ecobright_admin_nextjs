@@ -2,9 +2,9 @@ import Link from "next/link";
 import { db } from "@eco-bright/db";
 import { deleteCategoryAction } from "@/actions/categories";
 import { AdminShell } from "@/components/admin-shell";
-import { ConfirmDialogForm } from "@/components/ui";
+import { RowActionMenu } from "@/components/row-action-menu";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard } from "@/components/page-shell";
-import { Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
+import { Badge, Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { formatDateTime } from "@/lib/format";
 import { getPagination } from "@/lib/pagination";
 import { requireAuth } from "@/lib/session";
@@ -101,7 +101,14 @@ export default async function CategoriesPage({
                         </TableCell>
                         <TableCell className="text-sm text-slate-600">{category.slug}</TableCell>
                         <TableCell className="text-sm text-slate-600">
-                          {usageMap.get(category.slug) ?? 0}
+                          <div className="flex items-center gap-2">
+                            <span>{usageMap.get(category.slug) ?? 0}</span>
+                            {(usageMap.get(category.slug) ?? 0) > 0 ? (
+                              <Badge variant="warning">Referenced</Badge>
+                            ) : (
+                              <Badge variant="success">Unused</Badge>
+                            )}
+                          </div>
                         </TableCell>
                         <TableCell className="text-sm text-slate-600">
                           {category.createdBy.name}
@@ -110,17 +117,15 @@ export default async function CategoriesPage({
                           {formatDateTime(category.updatedAt)}
                         </TableCell>
                         <TableCell>
-                          <div className="flex items-center justify-end gap-2">
-                            <Button asChild variant="outline" size="sm">
-                              <Link href={`/categories/${category.id}/edit`}>Edit</Link>
-                            </Button>
-                            <ConfirmDialogForm
-                              triggerLabel="Delete"
+                          <div className="flex items-center justify-end">
+                            <RowActionMenu
                               title="Delete category"
-                              description="This only succeeds when no products still reference this category."
-                              action={deleteCategoryAction}
-                              hiddenFields={{ id: category.id }}
-                              confirmLabel="Delete"
+                              editHref={`/categories/${category.id}/edit`}
+                              deleteAction={deleteCategoryAction}
+                              deleteFields={{ id: category.id }}
+                              deleteDescription="This only succeeds when no products still reference this category."
+                              deleteDisabled={(usageMap.get(category.slug) ?? 0) > 0}
+                              deleteDisabledReason="This category is still referenced by products."
                             />
                           </div>
                         </TableCell>

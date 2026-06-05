@@ -1,0 +1,111 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1576ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 999ms (981 modules)
+ GET / [32m200[39m in 1410ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 82ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 832ms (1223 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1109ms
+ GET / [32m200[39m in 56ms
+ GET /dashboard [32m200[39m in 5026ms
+ [32m[1m✓[22m[39m Compiled /products in 229ms (1244 modules)
+ GET /products [32m200[39m in 1021ms
+ [32m[1m✓[22m[39m Compiled /products/new in 242ms (1269 modules)
+ GET /products/new [32m200[39m in 904ms
+ [32m[1m✓[22m[39m Compiled /api/uploads/product in 294ms (1278 modules)
+ POST /api/uploads/product [33m400[39m in 471ms
+ [32m[1m✓[22m[39m Compiled /stock in 441ms (1284 modules)
+ GET /stock [32m200[39m in 1411ms
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+ [37m[1m○[22m[39m Compiling /login ...
+ [32m[1m✓[22m[39m Compiled /login in 1744ms (1317 modules)
+ GET /login?callbackUrl=%2Fdashboard [32m200[39m in 1957ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 429ms (1324 modules)
+ GET /api/auth/providers [32m200[39m in 1030ms
+ GET /api/auth/csrf [32m200[39m in 8ms
+ POST /api/auth/callback/credentials? [32m200[39m in 3730ms
+ GET /dashboard [32m200[39m in 2606ms
+ GET /dashboard [32m200[39m in 2523ms
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+ [32m[1m✓[22m[39m Compiled in 489ms (383 modules)
+ GET /dashboard [32m200[39m in 3282ms
+[Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection: [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'[39m
+}
+ [31m[1m⨯[22m[39m unhandledRejection:  [Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'] {
+  errno: [33m-2[39m,
+  code: [32m'ENOENT'[39m,
+  syscall: [32m'stat'[39m,
+  path: [32m'/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'[39m
+}
+<w> [1m[33m[webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat '/Users/kosalpen/Documents/admin-eco-bright/apps/admin/.next/cache/webpack/client-development/6.pack.gz'[39m[22m
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+ [32m[1m✓[22m[39m Compiled in 530ms (948 modules)
+ [32m[1m✓[22m[39m Compiled in 313ms (948 modules)
+ [31m[1m⨯[22m[39m Error: Could not find the module "/Users/kosalpen/Documents/admin-eco-bright/node_modules/next/dist/next-devtools/userspace/app/segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: [32m'155431969'[39m
+}
+ GET /products [32m200[39m in 3128ms
+ [32m[1m✓[22m[39m Compiled in 415ms (1331 modules)
+ [32m[1m✓[22m[39m Compiled in 189ms (948 modules)
+ [32m[1m✓[22m[39m Compiled in 716ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 358ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 351ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 408ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 360ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 384ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 290ms (1335 modules)
+ [32m[1m✓[22m[39m Compiled in 364ms (1335 modules)
+^C[?25h

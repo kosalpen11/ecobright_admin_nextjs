@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@eco-bright/db";
 import { changeUserPasswordAction } from "@/actions/users";
+import { ActionForm } from "@/components/action-form";
 import { AdminShell } from "@/components/admin-shell";
 import { PageHeader, QueryError, SectionCard } from "@/components/page-shell";
 import { Button, Input } from "@/components/ui";
@@ -46,7 +47,12 @@ export default async function UserPasswordPage({
       />
 
       <SectionCard title="Password Reset" description={user.email}>
-        <form action={action} className="max-w-md space-y-5">
+        <ActionForm
+          action={action}
+          className="max-w-md space-y-5"
+          pendingTitle="Updating password"
+          pendingDescription="The new password is being hashed and saved."
+        >
           <QueryError error={error} />
 
           <div className="space-y-2">
@@ -62,7 +68,7 @@ export default async function UserPasswordPage({
               <Link href="/users">Cancel</Link>
             </Button>
           </div>
-        </form>
+        </ActionForm>
       </SectionCard>
     </AdminShell>
   );

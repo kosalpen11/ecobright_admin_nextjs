@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { db } from "@eco-bright/db";
 import { createUserAction, revokeUserSessionsAction, toggleUserActiveAction } from "@/actions/users";
+import { ActionForm } from "@/components/action-form";
 import { AdminShell } from "@/components/admin-shell";
 import { ConfirmDialogForm, Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard, StatCard, StatusBadge } from "@/components/page-shell";
@@ -56,7 +57,12 @@ export default async function UsersPage({
           title="Create User"
           description="Create a new admin or staff account with a secure initial password."
         >
-          <form action={createUserAction} className="space-y-4">
+          <ActionForm
+            action={createUserAction}
+            className="space-y-4"
+            pendingTitle="Creating user"
+            pendingDescription="The account is being created and the password is being hashed."
+          >
             <QueryError error={error} />
 
             <div className="space-y-2">
@@ -102,7 +108,7 @@ export default async function UsersPage({
             </div>
 
             <Button type="submit">Create User</Button>
-          </form>
+          </ActionForm>
         </SectionCard>
 
         <SectionCard

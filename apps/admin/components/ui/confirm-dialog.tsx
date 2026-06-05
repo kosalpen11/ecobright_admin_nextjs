@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useFormStatus } from "react-dom";
+import { ActionForm } from "@/components/action-form";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -61,7 +62,11 @@ export function ConfirmDialogForm({
           <DialogTitle>{title}</DialogTitle>
           <DialogDescription>{description}</DialogDescription>
         </DialogHeader>
-        <form action={action}>
+        <ActionForm
+          action={action}
+          pendingTitle={confirmLabel}
+          pendingDescription="Please wait while the requested change is being applied."
+        >
           {Object.entries(hiddenFields ?? {}).map(([name, value]) => (
             <input key={name} type="hidden" name={name} value={value} />
           ))}
@@ -71,7 +76,7 @@ export function ConfirmDialogForm({
             </Button>
             <SubmitButton label={confirmLabel} variant={confirmVariant} />
           </DialogFooter>
-        </form>
+        </ActionForm>
       </DialogContent>
     </Dialog>
   );

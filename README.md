@@ -55,6 +55,11 @@ AUTH_SECRET="replace-with-a-long-random-secret"
 AUTH_TRUST_HOST=true
 AUTH_URL="http://localhost:3000"
 NEXTAUTH_URL="http://localhost:3000"
+CLOUDFLARE_R2_ACCOUNT_ID=""
+CLOUDFLARE_R2_ACCESS_KEY_ID=""
+CLOUDFLARE_R2_SECRET_ACCESS_KEY=""
+CLOUDFLARE_R2_BUCKET_NAME="eco-bright-products"
+CLOUDFLARE_R2_PUBLIC_URL=""
 ```
 
 Prisma CLI reads `.env` from the repo root. The Nx `admin` target also runs Next.js from the repo root so the same env file is used for local development.
@@ -115,6 +120,7 @@ pnpm nx build admin
 - Stock movement
 - User management
 - First admin seed
+- Cloudflare R2 main image + gallery upload
 
 ## Notes
 

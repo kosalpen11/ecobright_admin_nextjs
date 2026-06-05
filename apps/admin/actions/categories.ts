@@ -126,7 +126,9 @@ export async function deleteCategoryAction(formData: FormData) {
 
     if (productCount > 0) {
       redirect(
-        "/categories?error=Category%20cannot%20be%20deleted%20while%20products%20still%20reference%20it"
+        `/categories?error=${encodeURIComponent(
+          `Category cannot be deleted because ${productCount} product${productCount === 1 ? "" : "s"} still reference it.`
+        )}`
       );
     }
 

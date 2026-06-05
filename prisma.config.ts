@@ -38,5 +38,5 @@ loadEnvFile(".env.local");
 
 export default defineConfig({
   schema: "packages/db/prisma/schema.prisma",
-  seed: "tsx packages/db/prisma/seed.ts"
+  seed: "npx tsx packages/db/prisma/seed.ts"
 });

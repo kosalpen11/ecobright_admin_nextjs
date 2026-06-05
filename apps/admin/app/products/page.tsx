@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Prisma } from "@eco-bright/db";
 import { deleteProductAction, toggleProductActiveAction } from "@/actions/products";
 import { AdminShell } from "@/components/admin-shell";
+import { RowActionMenu } from "@/components/row-action-menu";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard, StatusBadge } from "@/components/page-shell";
 import { ProductImageStack } from "@/components/product-images";
-import { ConfirmDialogForm, Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
+import { Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { formatCurrency, formatDateTime } from "@/lib/format";
 import { getPagination } from "@/lib/pagination";
 import { requireAuth } from "@/lib/session";
@@ -87,7 +88,12 @@ export default async function ProductsPage({
         inStock: true,
         isActive: true,
         needsReview: true,
-        updatedAt: true
+        updatedAt: true,
+        _count: {
+          select: {
+            variants: true
+          }
+        }
       }
     })
   ]);
@@ -181,6 +187,7 @@ export default async function ProductsPage({
                       <TableHead>Product</TableHead>
                       <TableHead>Category</TableHead>
                       <TableHead>Price</TableHead>
+                      <TableHead>Variants</TableHead>
                       <TableHead>Stock</TableHead>
                       <TableHead>Status</TableHead>
                       <TableHead>Updated</TableHead>
@@ -221,7 +228,17 @@ export default async function ProductsPage({
                             ) : null}
                           </div>
                         </TableCell>
-                        <TableCell className="text-sm text-slate-600">{product.stockQty}</TableCell>
+                        <TableCell className="text-sm text-slate-600">
+                          {product._count.variants}
+                        </TableCell>
+                        <TableCell className="text-sm text-slate-600">
+                          <div>{product.stockQty}</div>
+                          {product._count.variants > 0 ? (
+                            <div className="text-xs text-slate-500">Variant total</div>
+                          ) : (
+                            <div className="text-xs text-slate-500">Product stock</div>
+                          )}
+                        </TableCell>
                         <TableCell>
                           <div className="flex flex-wrap gap-2">
                             <StatusBadge tone={product.isActive ? "success" : "default"}>
@@ -242,32 +259,19 @@ export default async function ProductsPage({
                           {formatDateTime(product.updatedAt)}
                         </TableCell>
                         <TableCell>
-                          <div className="flex justify-end gap-2">
-                            <Button asChild variant="outline" size="sm">
-                              <Link href={`/products/${product.id}/edit`}>Edit</Link>
-                            </Button>
-                            <ConfirmDialogForm
-                              triggerLabel={product.isActive ? "Deactivate" : "Activate"}
-                              title={product.isActive ? "Deactivate product" : "Activate product"}
-                              description="This changes product visibility without touching stock history."
-                              action={toggleProductActiveAction}
-                              hiddenFields={{
+                          <div className="flex justify-end">
+                            <RowActionMenu
+                              title="Delete product"
+                              editHref={`/products/${product.id}/edit`}
+                              toggleLabel={product.isActive ? "Deactivate" : "Activate"}
+                              toggleAction={toggleProductActiveAction}
+                              toggleFields={{
                                 id: product.id,
                                 nextValue: product.isActive ? "false" : "true"
                               }}
-                              confirmLabel={product.isActive ? "Deactivate" : "Activate"}
-                              triggerVariant={product.isActive ? "secondary" : "outline"}
-                              confirmVariant={product.isActive ? "destructive" : "default"}
-                            />
-                            <ConfirmDialogForm
-                              triggerLabel="Delete"
-                              title="Delete product"
-                              description="Delete is blocked when stock movement history already exists."
-                              action={deleteProductAction}
-                              hiddenFields={{ id: product.id }}
-                              confirmLabel="Delete"
-                              triggerVariant="destructive"
-                              confirmVariant="destructive"
+                              deleteAction={deleteProductAction}
+                              deleteFields={{ id: product.id }}
+                              deleteDescription="Delete is blocked when stock movement history already exists."
                             />
                           </div>
                         </TableCell>

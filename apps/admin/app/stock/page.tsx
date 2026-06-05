@@ -1,13 +1,32 @@
 import { Prisma } from "@eco-bright/db";
 import Link from "next/link";
 import { db } from "@eco-bright/db";
-import { createStockMovementAction } from "@/actions/stock";
 import { AdminShell } from "@/components/admin-shell";
+import { StockMovementForm } from "@/components/stock-movement-form";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard, StatusBadge } from "@/components/page-shell";
-import { Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow, Textarea } from "@/components/ui";
+import { StockBadge } from "@/components/stock-badge";
+import { Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { formatDateTime } from "@/lib/format";
 import { getPagination } from "@/lib/pagination";
 import { requireAuth } from "@/lib/session";
+
+function getVariantLabel(variant: {
+  title: string | null;
+  sku: string | null;
+  attributeLinks: Array<{
+    productAttributeValue: {
+      value: string;
+    };
+  }>;
+}) {
+  const attributeValues = variant.attributeLinks.map((link) => link.productAttributeValue.value);
+
+  if (attributeValues.length > 0) {
+    return attributeValues.join(" / ");
+  }
+
+  return variant.title || variant.sku || "Variant";
+}
 
 export default async function StockPage({
   searchParams
@@ -46,6 +65,7 @@ export default async function StockPage({
     movementAnd.push({
       OR: [
         { productId: { contains: productFilter, mode: "insensitive" } },
+        { productVariantId: { contains: productFilter, mode: "insensitive" } },
         {
           product: {
             title: { contains: productFilter, mode: "insensitive" }
@@ -97,7 +117,21 @@ export default async function StockPage({
       select: {
         id: true,
         title: true,
-        stockQty: true
+        stockQty: true,
+        variants: {
+          orderBy: { createdAt: "asc" },
+          select: {
+            id: true,
+            title: true,
+            sku: true,
+            stockQty: true,
+            attributeLinks: {
+              select: {
+                productAttributeValue: true
+              }
+            }
+          }
+        }
       }
     }),
     db.stockMovement.count({
@@ -113,6 +147,19 @@ export default async function StockPage({
           select: {
             id: true,
             title: true
+          }
+        },
+        productVariant: {
+          include: {
+            attributeLinks: {
+              include: {
+                productAttributeValue: {
+                  include: {
+                    productAttribute: true
+                  }
+                }
+              }
+            }
           }
         },
         createdBy: {
@@ -167,53 +214,7 @@ export default async function StockPage({
               </div>
             </form>
 
-            <form action={createStockMovementAction} className="space-y-4">
-              <div className="space-y-2">
-                <label htmlFor="productId" className="text-sm font-medium text-slate-700">
-                  Product
-                </label>
-                <Select id="productId" name="productId" defaultValue="" required>
-                  <option value="" disabled>
-                    Select a product
-                  </option>
-                  {products.map((item) => (
-                    <option key={item.id} value={item.id}>
-                      {item.title} ({item.id}) - {item.stockQty} in stock
-                    </option>
-                  ))}
-                </Select>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="space-y-2">
-                  <label htmlFor="type" className="text-sm font-medium text-slate-700">
-                    Type
-                  </label>
-                  <Select id="type" name="type" defaultValue="IN" required>
-                    <option value="IN">IN</option>
-                    <option value="OUT">OUT</option>
-                    <option value="ADJUSTMENT">ADJUST</option>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="quantity" className="text-sm font-medium text-slate-700">
-                    Quantity
-                  </label>
-                  <Input id="quantity" name="quantity" type="number" min="1" step="1" required />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="note" className="text-sm font-medium text-slate-700">
-                  Note
-                </label>
-                <Textarea id="note" name="note" rows={4} />
-              </div>
-
-              <QueryError error={error} />
-
-              <Button type="submit">Save Movement</Button>
-            </form>
+            <StockMovementForm products={products} error={error} />
           </div>
         </SectionCard>
 
@@ -279,6 +280,7 @@ export default async function StockPage({
                     <TableHeader>
                       <TableRow>
                         <TableHead>Product</TableHead>
+                        <TableHead>Variant</TableHead>
                         <TableHead>Type</TableHead>
                         <TableHead>Qty</TableHead>
                         <TableHead>Stock</TableHead>
@@ -296,18 +298,24 @@ export default async function StockPage({
                               <div className="text-xs text-slate-500">{movement.product.id}</div>
                             </div>
                           </TableCell>
+                          <TableCell className="text-sm text-slate-600">
+                            {movement.productVariant ? (
+                              <div className="space-y-1">
+                                <div>
+                                  {movement.productVariant.attributeLinks
+                                    .map((link) => link.productAttributeValue.value)
+                                    .join(" / ") || movement.productVariant.sku || "Variant"}
+                                </div>
+                                {movement.productVariant.sku ? (
+                                  <div className="text-xs text-slate-500">{movement.productVariant.sku}</div>
+                                ) : null}
+                              </div>
+                            ) : (
+                              "-"
+                            )}
+                          </TableCell>
                           <TableCell>
-                            <StatusBadge
-                              tone={
-                                movement.type === "OUT"
-                                  ? "warning"
-                                  : movement.type === "ADJUSTMENT"
-                                    ? "default"
-                                    : "success"
-                              }
-                            >
-                              {movement.type}
-                            </StatusBadge>
+                            <StockBadge type={movement.type} />
                           </TableCell>
                           <TableCell className="text-sm text-slate-600">{movement.quantity}</TableCell>
                           <TableCell className="text-sm text-slate-600">

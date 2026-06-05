@@ -1,0 +1,47 @@
+> sh -c 'rm -rf apps/admin/.next && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next build'
+
+   ▲ Next.js 15.5.18
+
+(node:76933) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:76972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 6.7s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/13) ...
+   Generating static pages (3/13) 
+   Generating static pages (6/13) 
+   Generating static pages (9/13) 
+ ✓ Generating static pages (13/13)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ƒ /                                      127 B         103 kB
+├ ○ /_not-found                            990 B         103 kB
+├ ƒ /api/auth/[...nextauth]                127 B         103 kB
+├ ƒ /api/uploads/product                   127 B         103 kB
+├ ƒ /categories                          1.23 kB         151 kB
+├ ƒ /categories/[id]/edit                  221 B         150 kB
+├ ƒ /categories/new                        221 B         150 kB
+├ ƒ /dashboard                             221 B         150 kB
+├ ƒ /login                               29.4 kB         180 kB
+├ ƒ /products                            1.23 kB         151 kB
+├ ƒ /products/[id]/edit                    130 B         155 kB
+├ ƒ /products/new                          128 B         155 kB
+├ ƒ /stock                               1.88 kB         152 kB
+├ ƒ /users                                 221 B         150 kB
+└ ƒ /users/[id]/password                   221 B         150 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/18-4ce5efc64451836b.js        46.3 kB
+  ├ chunks/87c73c54-24122e7b92478d00.js  54.2 kB
+  └ other shared chunks (total)          1.92 kB
+
+
+ƒ Middleware                               34 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

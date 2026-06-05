@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Boxes } from "lucide-react";
+import { AlertTriangle, ArrowRight, Boxes, Layers3, Package2, Warehouse } from "lucide-react";
 import { db } from "@eco-bright/db";
 import { AdminShell } from "@/components/admin-shell";
 import { EmptyState, PageHeader, SectionCard, StatCard, StatusBadge } from "@/components/page-shell";
+import { StockBadge } from "@/components/stock-badge";
 import { Button, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { formatDateTime } from "@/lib/format";
 import { requireAuth } from "@/lib/session";
@@ -116,10 +117,30 @@ export default async function DashboardPage() {
       />
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <StatCard label="Total Products" value={productCount} hint="Legacy catalog rows under admin control." />
-        <StatCard label="Total Categories" value={categoryCount} hint="Managed normalization dictionary." />
-        <StatCard label="Low Stock" value={lowStockCount} hint="Products with five units or fewer." />
-        <StatCard label="Out of Stock" value={outOfStockCount} hint="Products currently unavailable." />
+        <StatCard
+          label="Total Products"
+          value={productCount}
+          hint="Legacy catalog rows under admin control."
+          icon={<Package2 className="h-5 w-5" />}
+        />
+        <StatCard
+          label="Total Categories"
+          value={categoryCount}
+          hint="Managed normalization dictionary."
+          icon={<Layers3 className="h-5 w-5" />}
+        />
+        <StatCard
+          label="Low Stock"
+          value={lowStockCount}
+          hint="Products with five units or fewer."
+          icon={<AlertTriangle className="h-5 w-5" />}
+        />
+        <StatCard
+          label="Out of Stock"
+          value={outOfStockCount}
+          hint="Products currently unavailable."
+          icon={<Warehouse className="h-5 w-5" />}
+        />
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
@@ -159,17 +180,7 @@ export default async function DashboardPage() {
                         </div>
                       </TableCell>
                       <TableCell>
-                        <StatusBadge
-                          tone={
-                            movement.type === "OUT"
-                              ? "warning"
-                              : movement.type === "ADJUSTMENT"
-                                ? "default"
-                                : "success"
-                          }
-                        >
-                          {movement.type}
-                        </StatusBadge>
+                        <StockBadge type={movement.type} />
                       </TableCell>
                       <TableCell className="text-sm text-slate-600">
                         {movement.previousStock} to {movement.newStock}

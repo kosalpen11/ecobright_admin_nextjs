@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { db } from "@eco-bright/db";
 import { updateCategoryAction } from "@/actions/categories";
+import { ActionForm } from "@/components/action-form";
 import { AdminShell } from "@/components/admin-shell";
 import { PageHeader, QueryError, SectionCard } from "@/components/page-shell";
 import { Button, Input, Textarea } from "@/components/ui";
@@ -33,6 +34,10 @@ export default async function EditCategoryPage({
       <PageHeader
         title="Edit Category"
         description="Updating a category also remaps products that reference its slug."
+        breadcrumbs={[
+          { label: "Categories", href: "/categories" },
+          { label: category.name }
+        ]}
         action={
           <Button asChild variant="outline">
             <Link href="/categories">Back to Categories</Link>
@@ -41,7 +46,12 @@ export default async function EditCategoryPage({
       />
 
       <SectionCard title="Category Details" description="Keep the slug stable unless you intend to remap products.">
-        <form action={action} className="max-w-2xl space-y-5">
+        <ActionForm
+          action={action}
+          className="max-w-2xl space-y-5"
+          pendingTitle="Saving category"
+          pendingDescription="Category details and linked product mappings are being updated."
+        >
           <QueryError error={error} />
 
           <div className="space-y-2">
@@ -76,7 +86,7 @@ export default async function EditCategoryPage({
               <Link href="/categories">Cancel</Link>
             </Button>
           </div>
-        </form>
+        </ActionForm>
       </SectionCard>
     </AdminShell>
   );

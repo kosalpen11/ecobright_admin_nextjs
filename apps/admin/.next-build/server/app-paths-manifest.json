@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/uploads/product/route": "app/api/uploads/product/route.js",
+  "/categories/page": "app/categories/page.js",
+  "/categories/[id]/edit/page": "app/categories/[id]/edit/page.js",
+  "/products/[id]/edit/page": "app/products/[id]/edit/page.js",
+  "/page": "app/page.js",
+  "/stock/page": "app/stock/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/categories/new/page": "app/categories/new/page.js",
+  "/users/[id]/password/page": "app/users/[id]/password/page.js",
+  "/products/page": "app/products/page.js",
+  "/users/page": "app/users/page.js",
+  "/login/page": "app/login/page.js",
+  "/products/new/page": "app/products/new/page.js"
+}

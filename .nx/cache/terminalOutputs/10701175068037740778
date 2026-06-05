@@ -1,0 +1,57 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1564ms
+ [32m[1m✓[22m[39m Compiled /middleware in 125ms (115 modules)
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 5.2s (1288 modules)
+ [37m[1m○[22m[39m Compiling /categories ...
+ [32m[1m✓[22m[39m Compiled /categories in 3.8s (1294 modules)
+ GET /categories [32m200[39m in 10228ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1811ms
+ POST /categories [34m303[39m in 2970ms
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1117ms
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1936ms
+ [37m[1m○[22m[39m Compiling /categories/new ...
+ [32m[1m✓[22m[39m Compiled /categories/new in 586ms (1286 modules)
+ GET /categories/new [32m200[39m in 772ms
+ GET /categories [32m200[39m in 1454ms
+ POST /categories/new [34m303[39m in 2402ms
+ GET /categories [32m200[39m in 860ms
+ POST /categories [34m303[39m in 2035ms
+ [37m[1m○[22m[39m Compiling /stock ...
+ [32m[1m✓[22m[39m Compiled /stock in 535ms (1338 modules)
+ [32m[1m✓[22m[39m Compiled in 334ms (1352 modules)
+ GET /stock [32m200[39m in 3149ms
+ GET /stock [32m200[39m in 2233ms
+ GET /categories [32m200[39m in 890ms
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1094ms
+ POST /categories [34m303[39m in 2177ms
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1211ms
+ GET /categories?error=Category+cannot+be+deleted+while+products+still+reference+it [32m200[39m in 1937ms
+ [32m[1m✓[22m[39m Compiled /products in 319ms (978 modules)
+ GET /products [32m200[39m in 983ms
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 393ms (1378 modules)
+ GET /products/Grace_T8-Glass/edit [32m200[39m in 2064ms
+ [32m[1m✓[22m[39m Compiled in 429ms (1392 modules)
+ GET /products [32m200[39m in 627ms
+ POST /products/Grace_T8-Glass/edit [34m303[39m in 4642ms
+ GET /products [32m200[39m in 826ms
+ [32m[1m✓[22m[39m Compiled in 675ms (1392 modules)
+ GET /categories [32m200[39m in 882ms
+ GET /categories [32m200[39m in 894ms
+ GET /categories [32m200[39m in 1084ms
+ POST /categories [34m303[39m in 2302ms
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 691ms (1405 modules)
+ GET /dashboard [32m200[39m in 3202ms
+ GET /dashboard [32m200[39m in 2470ms
+ [32m[1m✓[22m[39m Compiled in 4.2s (1405 modules)
+ GET /dashboard [32m200[39m in 1117ms
+^C[?25h
