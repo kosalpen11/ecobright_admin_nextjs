@@ -1,0 +1,80 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1499ms
+ [32m[1m✓[22m[39m Compiled /middleware in 109ms (115 modules)
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 1259ms (1271 modules)
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 2201ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 69ms
+ [32m[1m✓[22m[39m Compiled /_not-found in 399ms (1276 modules)
+ GET /products/solar-flood-light [33m404[39m in 557ms
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 145ms
+ [32m[1m✓[22m[39m Compiled /products in 419ms (1293 modules)
+ GET /products [32m200[39m in 5311ms
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 45ms
+^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B^[[1;2B [32m[1m✓[22m[39m Compiled in 5s (1302 modules)
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at eval (app/products/[id]/edit/page.tsx:29:25)
+    at async EditProductPage (app/products/[id]/edit/page.tsx:22:43)
+[0m [90m 27 |[39m         select[33m:[39m { id[33m:[39m [36mtrue[39m[33m,[39m name[33m:[39m [36mtrue[39m[33m,[39m slug[33m:[39m [36mtrue[39m }
+ [90m 28 |[39m       })[33m,[39m
+[31m[1m>[22m[39m[90m 29 |[39m       tx[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                         [31m[1m^[22m[39m
+ [90m 30 |[39m         where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 31 |[39m         orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 32 |[39m         include[33m:[39m {[0m {
+  digest: [32m'49603936'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 1018ms
+^C[?25h

@@ -16,228 +16,100 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "lib/prisma.ts",
-        "hash": "5570291241908635247"
-      },
-      {
-        "file": "app/login/page.tsx",
-        "hash": "12318197704518638318"
-      },
-      {
-        "file": "app/page.tsx",
-        "hash": "13997629557473255146"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "10085993725876532954"
-      },
-      {
-        "file": "components/ui.tsx",
-        "hash": "11851920123379186421"
-      },
-      {
-        "file": "next.config.ts",
-        "hash": "2631239752477163793"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "2908525819885129765"
-      },
-      {
-        "file": "auth.config.ts",
-        "hash": "12584305710574266971"
-      },
-      {
-        "file": "app/login/login-form.tsx",
-        "hash": "5102001988422833731"
-      },
-      {
-        "file": "auth.ts",
-        "hash": "10878774800605250630"
-      },
-      {
-        "file": "app/products/page.tsx",
-        "hash": "13275752192973780667"
-      },
-      {
-        "file": "components/admin-shell.tsx",
-        "hash": "10463798594999799646"
-      },
-      {
-        "file": "app/stock/page.tsx",
-        "hash": "5802453862308859718"
-      },
-      {
-        "file": ".env.example",
-        "hash": "10749122115572612440"
-      },
-      {
-        "file": "app/categories/new/page.tsx",
-        "hash": "1093154357690705197"
-      },
-      {
-        "file": "netlify.yml",
-        "hash": "16456295891649340454"
-      },
-      {
-        "file": "nx.json",
-        "hash": "8421952385421462872"
-      },
-      {
-        "file": "app/products/new/page.tsx",
-        "hash": "14138423822509606368"
+        "file": "README.md",
+        "hash": "14239600014709443854"
       },
       {
         "file": "app/login/actions.ts",
         "hash": "450511470123769640"
       },
       {
-        "file": "app/users/loading.tsx",
-        "hash": "14704291170915000388"
-      },
-      {
-        "file": "app/categories/page.tsx",
-        "hash": "5826296510801892069"
-      },
-      {
-        "file": "lib/validations/auth.ts",
-        "hash": "5156304549172530603"
-      },
-      {
-        "file": "app/layout.tsx",
-        "hash": "8095656205990137197"
-      },
-      {
-        "file": "types/next-auth.d.ts",
-        "hash": "8753397867414584301"
-      },
-      {
-        "file": "pnpm-lock.yaml",
-        "hash": "18362449323110739766"
-      },
-      {
-        "file": "lib/validations/category.ts",
-        "hash": "15389517637833189260"
+        "file": "tailwind.config.ts",
+        "hash": "14919173605276702829"
       },
       {
         "file": "pnpm-workspace.yaml",
         "hash": "9750177317466281158"
       },
       {
-        "file": "app/users/page.tsx",
-        "hash": "14908856597035482258"
-      },
-      {
-        "file": "app/categories/actions.ts",
-        "hash": "10357369444958816205"
-      },
-      {
-        "file": "app/products/actions.ts",
-        "hash": "16749103180381935154"
-      },
-      {
-        "file": "prisma/schema.prisma",
-        "hash": "5864000276805569573"
-      },
-      {
-        "file": "README.md",
-        "hash": "17516226036786649242"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "11549028915749872110"
-      },
-      {
-        "file": "app/loading.tsx",
-        "hash": "1787366675085198735"
+        "file": "app/globals.css",
+        "hash": "15190514486906575849"
       },
       {
         "file": "lib/validations/product.ts",
         "hash": "9430386854289067875"
       },
       {
-        "file": "CURRENT_ADMIN_SCHEMA.md",
-        "hash": "15141129645619324885"
+        "file": "postcss.config.js",
+        "hash": "17789872283383255573"
       },
       {
-        "file": "app/categories/loading.tsx",
-        "hash": "12597397485031620478"
+        "file": "app/users/page.tsx",
+        "hash": "14908856597035482258"
       },
       {
-        "file": "middleware.ts",
-        "hash": "3192554020164481334"
-      },
-      {
-        "file": "app/users/actions.ts",
-        "hash": "5448144855483962914"
-      },
-      {
-        "file": "next-env.d.ts",
-        "hash": "2517811901510882550"
-      },
-      {
-        "file": "lib/pagination.ts",
-        "hash": "1785737517654585997"
-      },
-      {
-        "file": "app/stock/actions.ts",
-        "hash": "2135734311041691131"
-      },
-      {
-        "file": "app/categories/[id]/edit/page.tsx",
-        "hash": "12254596825180428131"
-      },
-      {
-        "file": "app/globals.css",
-        "hash": "15190514486906575849"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "2582944569798175961"
-      },
-      {
-        "file": "app/products/loading.tsx",
-        "hash": "1144347044093807063"
-      },
-      {
-        "file": "prisma/seed.ts",
-        "hash": "13348222740861519731"
-      },
-      {
-        "file": "app/dashboard/page.tsx",
-        "hash": "12684176106554463678"
-      },
-      {
-        "file": "lib/validations/stock.ts",
-        "hash": "2803215379887266315"
-      },
-      {
-        "file": "prisma.config.ts",
-        "hash": "8481718162290480527"
-      },
-      {
-        "file": "app/users/[id]/password/page.tsx",
-        "hash": "8946858091908998139"
+        "file": ".env.example",
+        "hash": "10749122115572612440"
       },
       {
         "file": "app/stock/loading.tsx",
         "hash": "12711401595768591264"
       },
       {
-        "file": "app/products/[id]/edit/page.tsx",
-        "hash": "622457543205727165"
+        "file": "app/users/loading.tsx",
+        "hash": "14704291170915000388"
       },
       {
-        "file": "postcss.config.js",
-        "hash": "17789872283383255573"
+        "file": "tsconfig.json",
+        "hash": "2582944569798175961"
       },
       {
-        "file": "app/api/auth/[...nextauth]/route.ts",
-        "hash": "6898140225989190846"
+        "file": "nx.json",
+        "hash": "8421952385421462872"
+      },
+      {
+        "file": "app/categories/page.tsx",
+        "hash": "5826296510801892069"
+      },
+      {
+        "file": "netlify.yml",
+        "hash": "16456295891649340454"
+      },
+      {
+        "file": "prisma/schema.prisma",
+        "hash": "5864000276805569573"
       },
       {
         "file": "lib/auth.ts",
         "hash": "13498470831015794617"
+      },
+      {
+        "file": "components/admin-shell.tsx",
+        "hash": "10463798594999799646"
+      },
+      {
+        "file": "lib/session.ts",
+        "hash": "7811655868034793481"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10085993725876532954"
+      },
+      {
+        "file": "CURRENT_ADMIN_SCHEMA.md",
+        "hash": "15141129645619324885"
+      },
+      {
+        "file": "app/categories/new/page.tsx",
+        "hash": "1093154357690705197"
+      },
+      {
+        "file": "app/dashboard/page.tsx",
+        "hash": "12684176106554463678"
+      },
+      {
+        "file": "components/product-images.tsx",
+        "hash": "3799088383591519874"
       },
       {
         "file": "components/logout-button.tsx",
@@ -245,82 +117,214 @@
       },
       {
         "file": "package.json",
-        "hash": "8791694965545124474"
+        "hash": "12688231973625549014"
       },
       {
-        "file": "tailwind.config.ts",
-        "hash": "14919173605276702829"
+        "file": "app/stock/actions.ts",
+        "hash": "2135734311041691131"
       },
       {
-        "file": "components/product-images.tsx",
-        "hash": "15092385124423476567"
+        "file": "app/login/page.tsx",
+        "hash": "12318197704518638318"
       },
       {
-        "file": "lib/session.ts",
-        "hash": "7811655868034793481"
+        "file": "app/products/page.tsx",
+        "hash": "13275752192973780667"
       },
       {
         "file": "app/dashboard/loading.tsx",
         "hash": "15738955575395175709"
       },
       {
+        "file": "next-env.d.ts",
+        "hash": "2517811901510882550"
+      },
+      {
+        "file": "prisma.config.ts",
+        "hash": "8481718162290480527"
+      },
+      {
+        "file": "app/stock/page.tsx",
+        "hash": "5802453862308859718"
+      },
+      {
+        "file": "app/categories/[id]/edit/page.tsx",
+        "hash": "12254596825180428131"
+      },
+      {
+        "file": "app/loading.tsx",
+        "hash": "1787366675085198735"
+      },
+      {
+        "file": "lib/validations/category.ts",
+        "hash": "15389517637833189260"
+      },
+      {
+        "file": "app/layout.tsx",
+        "hash": "8095656205990137197"
+      },
+      {
+        "file": "app/products/actions.ts",
+        "hash": "16749103180381935154"
+      },
+      {
+        "file": "lib/pagination.ts",
+        "hash": "1785737517654585997"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "2908525819885129765"
+      },
+      {
+        "file": "app/api/auth/[...nextauth]/route.ts",
+        "hash": "6898140225989190846"
+      },
+      {
+        "file": "lib/prisma.ts",
+        "hash": "5570291241908635247"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "11549028915749872110"
+      },
+      {
+        "file": "lib/validations/stock.ts",
+        "hash": "2803215379887266315"
+      },
+      {
+        "file": "types/next-auth.d.ts",
+        "hash": "8753397867414584301"
+      },
+      {
+        "file": "app/products/[id]/edit/page.tsx",
+        "hash": "622457543205727165"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "5446549178112939816"
+      },
+      {
+        "file": "auth.ts",
+        "hash": "10878774800605250630"
+      },
+      {
+        "file": "VARIANTS_ATTRIBUTES_EXPORT_GAP.md",
+        "hash": "9732981688993100565"
+      },
+      {
+        "file": "middleware.ts",
+        "hash": "3192554020164481334"
+      },
+      {
+        "file": "prisma/seed.ts",
+        "hash": "13348222740861519731"
+      },
+      {
         "file": "lib/validations/user.ts",
         "hash": "3599548002284514272"
+      },
+      {
+        "file": "lib/validations/auth.ts",
+        "hash": "5156304549172530603"
+      },
+      {
+        "file": "app/categories/actions.ts",
+        "hash": "10357369444958816205"
+      },
+      {
+        "file": "auth.config.ts",
+        "hash": "12584305710574266971"
+      },
+      {
+        "file": "app/page.tsx",
+        "hash": "13997629557473255146"
+      },
+      {
+        "file": "app/categories/loading.tsx",
+        "hash": "12597397485031620478"
+      },
+      {
+        "file": "app/users/actions.ts",
+        "hash": "5448144855483962914"
+      },
+      {
+        "file": "app/users/[id]/password/page.tsx",
+        "hash": "8946858091908998139"
+      },
+      {
+        "file": "app/products/loading.tsx",
+        "hash": "1144347044093807063"
+      },
+      {
+        "file": "next.config.ts",
+        "hash": "2631239752477163793"
+      },
+      {
+        "file": "components/ui.tsx",
+        "hash": "11851920123379186421"
+      },
+      {
+        "file": "app/products/new/page.tsx",
+        "hash": "14138423822509606368"
+      },
+      {
+        "file": "app/login/login-form.tsx",
+        "hash": "5102001988422833731"
       }
     ],
     "projectFileMap": {
       "admin": [
         {
           "file": "apps/admin/.next-build/BUILD_ID",
-          "hash": "7289771963702302331"
+          "hash": "16484821590761727326"
         },
         {
           "file": "apps/admin/.next-build/app-build-manifest.json",
-          "hash": "17073999156292657312"
+          "hash": "13152814848433479630"
         },
         {
           "file": "apps/admin/.next-build/app-path-routes-manifest.json",
-          "hash": "15491229332958668538"
+          "hash": "3572161930083928854"
         },
         {
           "file": "apps/admin/.next-build/build-manifest.json",
-          "hash": "375520940806238333"
+          "hash": "14923943670622624738"
         },
         {
           "file": "apps/admin/.next-build/cache/.previewinfo",
-          "hash": "14355746021915012475"
+          "hash": "7311966477628148732"
         },
         {
           "file": "apps/admin/.next-build/cache/.rscinfo",
-          "hash": "18375442016691743379"
+          "hash": "11784202587667362725"
         },
         {
           "file": "apps/admin/.next-build/cache/.tsbuildinfo",
-          "hash": "8869951286044577928"
+          "hash": "17945186756272618191"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/client-production/0.pack",
-          "hash": "1503633386498724066"
+          "hash": "15831334828409358092"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/client-production/index.pack",
-          "hash": "5777231952535900841"
+          "hash": "2865321751037344930"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/edge-server-production/0.pack",
-          "hash": "6147148770462956041"
+          "hash": "16043163539340782499"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/edge-server-production/index.pack",
-          "hash": "16644372695079709227"
+          "hash": "16130473888387502843"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/server-production/0.pack",
-          "hash": "10957904975814987960"
+          "hash": "8193229020068547277"
         },
         {
           "file": "apps/admin/.next-build/cache/webpack/server-production/index.pack",
-          "hash": "16301229599594883722"
+          "hash": "5415180574208708528"
         },
         {
           "file": "apps/admin/.next-build/diagnostics/build-diagnostics.json",
@@ -340,11 +344,11 @@
         },
         {
           "file": "apps/admin/.next-build/next-minimal-server.js.nft.json",
-          "hash": "12798188868837385480"
+          "hash": "7105865596919233118"
         },
         {
           "file": "apps/admin/.next-build/next-server.js.nft.json",
-          "hash": "12562996290847271746"
+          "hash": "1012484681972173737"
         },
         {
           "file": "apps/admin/.next-build/package.json",
@@ -352,7 +356,7 @@
         },
         {
           "file": "apps/admin/.next-build/prerender-manifest.json",
-          "hash": "9660890471358120489"
+          "hash": "9449853727307534165"
         },
         {
           "file": "apps/admin/.next-build/react-loadable-manifest.json",
@@ -360,7 +364,7 @@
         },
         {
           "file": "apps/admin/.next-build/required-server-files.json",
-          "hash": "14120328642044234117"
+          "hash": "8036618430241113742"
         },
         {
           "file": "apps/admin/.next-build/routes-manifest.json",
@@ -368,11 +372,131 @@
         },
         {
           "file": "apps/admin/.next-build/server/app-paths-manifest.json",
-          "hash": "14830693703545959298"
+          "hash": "13356790851808902560"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/[id]/edit/page.js",
+          "hash": "11579216088361554540"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/[id]/edit/page.js.nft.json",
+          "hash": "6231004502972092482"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/[id]/edit/page_client-reference-manifest.js",
+          "hash": "5676247428900805533"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/new/page.js",
+          "hash": "16047981598395552790"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/new/page.js.nft.json",
+          "hash": "12761603817266522152"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/new/page_client-reference-manifest.js",
+          "hash": "7960345996482153971"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/page.js",
+          "hash": "3145367713314699381"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/page.js.nft.json",
+          "hash": "3341424112025009229"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/categories/page_client-reference-manifest.js",
+          "hash": "3987158345504052739"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/dashboard/page.js",
+          "hash": "1484605298340816379"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/dashboard/page.js.nft.json",
+          "hash": "3341424112025009229"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/dashboard/page_client-reference-manifest.js",
+          "hash": "15847948417750054124"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/[id]/edit/page.js",
+          "hash": "838729959578729634"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/[id]/edit/page.js.nft.json",
+          "hash": "6231004502972092482"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/[id]/edit/page_client-reference-manifest.js",
+          "hash": "6723587865568558329"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/new/page.js",
+          "hash": "16844030024203833255"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/new/page.js.nft.json",
+          "hash": "12761603817266522152"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/new/page_client-reference-manifest.js",
+          "hash": "3905535648741307261"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/page.js",
+          "hash": "2290030485265089627"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/page.js.nft.json",
+          "hash": "3341424112025009229"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/products/page_client-reference-manifest.js",
+          "hash": "1764162276395377615"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/stock/page.js",
+          "hash": "4406736996828205739"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/stock/page.js.nft.json",
+          "hash": "13464752604454794320"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/stock/page_client-reference-manifest.js",
+          "hash": "10430030972084380063"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/[id]/password/page.js",
+          "hash": "13795430640293502619"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/[id]/password/page.js.nft.json",
+          "hash": "6231004502972092482"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/[id]/password/page_client-reference-manifest.js",
+          "hash": "8166984491270584471"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/page.js",
+          "hash": "6972484683790998702"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/page.js.nft.json",
+          "hash": "3341424112025009229"
+        },
+        {
+          "file": "apps/admin/.next-build/server/app/(admin)/users/page_client-reference-manifest.js",
+          "hash": "123215078499384561"
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found.html",
-          "hash": "16527093054087471731"
+          "hash": "9979504818500072972"
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found.meta",
@@ -380,227 +504,115 @@
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found.rsc",
-          "hash": "15352884892593837094"
+          "hash": "7532977630901887140"
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found/page.js",
-          "hash": "724935186537070042"
+          "hash": "16681927427295365820"
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found/page.js.nft.json",
-          "hash": "18306314415950744303"
+          "hash": "11336426770126169267"
         },
         {
           "file": "apps/admin/.next-build/server/app/_not-found/page_client-reference-manifest.js",
-          "hash": "16697409841324014069"
+          "hash": "12236196167070274118"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/auth/[...nextauth]/route.js",
-          "hash": "5662555061831350364"
+          "hash": "15175881106169987841"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/auth/[...nextauth]/route.js.nft.json",
-          "hash": "15681671121353934955"
+          "hash": "8140842283127097598"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/auth/[...nextauth]/route_client-reference-manifest.js",
-          "hash": "8661899519198473938"
+          "hash": "951120001236003177"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/uploads/product/route.js",
-          "hash": "9504387335059865518"
+          "hash": "10714262487823356113"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/uploads/product/route.js.nft.json",
-          "hash": "1220632856819323010"
+          "hash": "4888868270732545320"
         },
         {
           "file": "apps/admin/.next-build/server/app/api/uploads/product/route_client-reference-manifest.js",
-          "hash": "13738646227314095944"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/[id]/edit/page.js",
-          "hash": "9657245988655448198"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/[id]/edit/page.js.nft.json",
-          "hash": "622861179044256057"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/[id]/edit/page_client-reference-manifest.js",
-          "hash": "11577025486654487402"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/new/page.js",
-          "hash": "1356382218875421222"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/new/page.js.nft.json",
-          "hash": "11659712676490051876"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/new/page_client-reference-manifest.js",
-          "hash": "2697189328505648256"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/page.js",
-          "hash": "15626500209162128234"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/page.js.nft.json",
-          "hash": "6468349960036256921"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/categories/page_client-reference-manifest.js",
-          "hash": "7769320388438711645"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/dashboard/page.js",
-          "hash": "11086292603168466489"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/dashboard/page.js.nft.json",
-          "hash": "6468349960036256921"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/dashboard/page_client-reference-manifest.js",
-          "hash": "3022961911861099572"
+          "hash": "2318850265779541388"
         },
         {
           "file": "apps/admin/.next-build/server/app/login/page.js",
-          "hash": "72211674514658301"
+          "hash": "444344164423869006"
         },
         {
           "file": "apps/admin/.next-build/server/app/login/page.js.nft.json",
-          "hash": "6468349960036256921"
+          "hash": "13166552913384020107"
         },
         {
           "file": "apps/admin/.next-build/server/app/login/page_client-reference-manifest.js",
-          "hash": "4978307139072111974"
+          "hash": "5097884757348498548"
         },
         {
           "file": "apps/admin/.next-build/server/app/page.js",
-          "hash": "8949835702828030216"
+          "hash": "14065082439257240376"
         },
         {
           "file": "apps/admin/.next-build/server/app/page.js.nft.json",
-          "hash": "1805431120806669197"
+          "hash": "8664964792119870537"
         },
         {
           "file": "apps/admin/.next-build/server/app/page_client-reference-manifest.js",
-          "hash": "17719225654318844964"
+          "hash": "11385016621605412093"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/[id]/edit/page.js",
-          "hash": "6940548563102363222"
+          "file": "apps/admin/.next-build/server/chunks/17.js",
+          "hash": "16401148904782574896"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/[id]/edit/page.js.nft.json",
-          "hash": "622861179044256057"
+          "file": "apps/admin/.next-build/server/chunks/20.js",
+          "hash": "5638569091722048949"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/[id]/edit/page_client-reference-manifest.js",
-          "hash": "10523500318427302995"
+          "file": "apps/admin/.next-build/server/chunks/230.js",
+          "hash": "171829549097726103"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/new/page.js",
-          "hash": "4454639873490420168"
+          "file": "apps/admin/.next-build/server/chunks/31.js",
+          "hash": "11741014677676159636"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/new/page.js.nft.json",
-          "hash": "11659712676490051876"
+          "file": "apps/admin/.next-build/server/chunks/331.js",
+          "hash": "10603463644959565994"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/new/page_client-reference-manifest.js",
-          "hash": "7999105574694850791"
+          "file": "apps/admin/.next-build/server/chunks/332.js",
+          "hash": "3952405762603151370"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/page.js",
-          "hash": "452667034584360319"
+          "file": "apps/admin/.next-build/server/chunks/339.js",
+          "hash": "2119382596970152113"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/page.js.nft.json",
-          "hash": "6468349960036256921"
+          "file": "apps/admin/.next-build/server/chunks/426.js",
+          "hash": "10947023255073989783"
         },
         {
-          "file": "apps/admin/.next-build/server/app/products/page_client-reference-manifest.js",
-          "hash": "11880364542643349593"
+          "file": "apps/admin/.next-build/server/chunks/555.js",
+          "hash": "11094779162541723081"
         },
         {
-          "file": "apps/admin/.next-build/server/app/stock/page.js",
-          "hash": "16336256360372428016"
+          "file": "apps/admin/.next-build/server/chunks/672.js",
+          "hash": "16370004372238921745"
         },
         {
-          "file": "apps/admin/.next-build/server/app/stock/page.js.nft.json",
-          "hash": "6468349960036256921"
+          "file": "apps/admin/.next-build/server/chunks/700.js",
+          "hash": "1529953694552053321"
         },
         {
-          "file": "apps/admin/.next-build/server/app/stock/page_client-reference-manifest.js",
-          "hash": "1583639740065560083"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/[id]/password/page.js",
-          "hash": "10807023745115928259"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/[id]/password/page.js.nft.json",
-          "hash": "622861179044256057"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/[id]/password/page_client-reference-manifest.js",
-          "hash": "10668146737684883714"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/page.js",
-          "hash": "5861862102153640337"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/page.js.nft.json",
-          "hash": "6468349960036256921"
-        },
-        {
-          "file": "apps/admin/.next-build/server/app/users/page_client-reference-manifest.js",
-          "hash": "1787523938385080316"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/124.js",
-          "hash": "3005858982588089172"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/203.js",
-          "hash": "14825927311203687307"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/300.js",
-          "hash": "1735231926783121027"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/321.js",
-          "hash": "248854032498887157"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/381.js",
-          "hash": "13758912301397520313"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/383.js",
-          "hash": "14767245999785914469"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/674.js",
-          "hash": "17281024653030980038"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/707.js",
-          "hash": "6018894433580235618"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/723.js",
-          "hash": "8666393006847884034"
-        },
-        {
-          "file": "apps/admin/.next-build/server/chunks/743.js",
-          "hash": "1810192817540126664"
+          "file": "apps/admin/.next-build/server/chunks/955.js",
+          "hash": "18257839728923431600"
         },
         {
           "file": "apps/admin/.next-build/server/edge-runtime-webpack.js",
@@ -620,11 +632,11 @@
         },
         {
           "file": "apps/admin/.next-build/server/middleware-build-manifest.js",
-          "hash": "17254281716528006388"
+          "hash": "15708678031755412151"
         },
         {
           "file": "apps/admin/.next-build/server/middleware-manifest.json",
-          "hash": "14879603063011745646"
+          "hash": "16408352736423522836"
         },
         {
           "file": "apps/admin/.next-build/server/middleware-react-loadable-manifest.js",
@@ -632,11 +644,11 @@
         },
         {
           "file": "apps/admin/.next-build/server/middleware.js",
-          "hash": "6652748700889064071"
+          "hash": "7649290356828937335"
         },
         {
           "file": "apps/admin/.next-build/server/middleware.js.map",
-          "hash": "9329159862487676848"
+          "hash": "1259962478232223214"
         },
         {
           "file": "apps/admin/.next-build/server/next-font-manifest.js",
@@ -652,223 +664,303 @@
         },
         {
           "file": "apps/admin/.next-build/server/pages/404.html",
-          "hash": "16527093054087471731"
+          "hash": "9979504818500072972"
         },
         {
           "file": "apps/admin/.next-build/server/pages/500.html",
-          "hash": "9584691730522734473"
+          "hash": "8165639909013176647"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_app.js",
-          "hash": "8911345137548193333"
+          "hash": "11205088300441862464"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_app.js.nft.json",
-          "hash": "474807881007386319"
+          "hash": "6010257190670590769"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_document.js",
-          "hash": "9396638443705308477"
+          "hash": "6842655247177195388"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_document.js.nft.json",
-          "hash": "305898365762557063"
+          "hash": "1175540033571030109"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_error.js",
-          "hash": "10687085941369057179"
+          "hash": "3921996966387869294"
         },
         {
           "file": "apps/admin/.next-build/server/pages/_error.js.nft.json",
-          "hash": "9236501640955685151"
+          "hash": "13210594412533188626"
         },
         {
           "file": "apps/admin/.next-build/server/server-reference-manifest.js",
-          "hash": "12264660479111532478"
+          "hash": "14507582691938751319"
         },
         {
           "file": "apps/admin/.next-build/server/server-reference-manifest.json",
-          "hash": "14716665153101883284"
+          "hash": "235881023727194675"
         },
         {
           "file": "apps/admin/.next-build/server/webpack-runtime.js",
           "hash": "7975556771236535766"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/147-afdd1761938783f7.js",
-          "hash": "12858261863830862009"
+          "file": "apps/admin/.next-build/static/cN0c9CmP6hSF-5dfvMapE/_buildManifest.js",
+          "hash": "14257990952036223067"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/18-4ce5efc64451836b.js",
-          "hash": "14801631107098115785"
+          "file": "apps/admin/.next-build/static/cN0c9CmP6hSF-5dfvMapE/_ssgManifest.js",
+          "hash": "2285259522902979167"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/194-d58d5c3ce2f3b851.js",
-          "hash": "4046462927425216330"
+          "file": "apps/admin/.next-build/static/chunks/1403cfaa-6db8521358bcd91a.js",
+          "hash": "339393617887535175"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/619-23272647ae31f532.js",
-          "hash": "6176004502865590250"
+          "file": "apps/admin/.next-build/static/chunks/159-2398f495578bc26c.js",
+          "hash": "772870331732497792"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/664-6d821dc1aacb6b48.js",
-          "hash": "6262329911710347631"
+          "file": "apps/admin/.next-build/static/chunks/182-8529cfd077ff5780.js",
+          "hash": "7695945470127748439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/793-015c759bd7c6b88d.js",
-          "hash": "2165975471631914963"
+          "file": "apps/admin/.next-build/static/chunks/339-e03ce52693c79260.js",
+          "hash": "15349896730961460058"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/87c73c54-24122e7b92478d00.js",
-          "hash": "5228715896365173471"
+          "file": "apps/admin/.next-build/static/chunks/377-6cb2442d741c52cd.js",
+          "hash": "4738278871628996582"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/885-42c30f42dbbf29c7.js",
-          "hash": "11789302596261043781"
+          "file": "apps/admin/.next-build/static/chunks/538-b24b4e95102df128.js",
+          "hash": "12670452374747912900"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/993-517ad966d1b7b1a9.js",
-          "hash": "12391537850905522688"
+          "file": "apps/admin/.next-build/static/chunks/766-785e7a3a5a037a97.js",
+          "hash": "11115886316551612428"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/_not-found/page-0f6e39ecde0c0028.js",
-          "hash": "1516981186658273950"
+          "file": "apps/admin/.next-build/static/chunks/878-dd9084494544da61.js",
+          "hash": "4833488521424823874"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/api/auth/[...nextauth]/route-59e4b39f08f8f157.js",
-          "hash": "4975334896055190262"
+          "file": "apps/admin/.next-build/static/chunks/885-4c1103f73b8504be.js",
+          "hash": "7558986466350326896"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/api/uploads/product/route-59e4b39f08f8f157.js",
-          "hash": "4975334896055190262"
+          "file": "apps/admin/.next-build/static/chunks/937-ab56789ee1990c32.js",
+          "hash": "11414822863039064276"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/categories/[id]/edit/page-6737cdd8f82c696b.js",
-          "hash": "4603687853741694681"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/categories/[id]/edit/page-a84e7612c6702ad1.js",
+          "hash": "12426940320589516665"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/categories/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/categories/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/categories/new/page-6737cdd8f82c696b.js",
-          "hash": "4603687853741694681"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/categories/new/page-a84e7612c6702ad1.js",
+          "hash": "12426940320589516665"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/categories/page-8e52038255f42e64.js",
-          "hash": "9633316789925419931"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/categories/page-d10fe770bfda23da.js",
+          "hash": "16073877972996826947"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/dashboard/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/dashboard/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/dashboard/page-70739296cc85f654.js",
-          "hash": "15443058783747439746"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/dashboard/page-0cd64bba6e1532fc.js",
+          "hash": "8137612221509141938"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/error-c946ff45ca6dcaac.js",
-          "hash": "6562180783368542193"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/layout-e97a46c4fb6f1b23.js",
+          "hash": "4675643771792225144"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/global-error-c3a4785006caea74.js",
-          "hash": "6644427068058313906"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/products/[id]/edit/page-d8116a0a33868fb3.js",
+          "hash": "4042021169530871928"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/layout-e6100d20c82bd1ea.js",
-          "hash": "17454306072770113577"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/products/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/products/new/page-ea66cfc8fccb7d56.js",
+          "hash": "9103189104673383515"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/login/page-9f03d5d44dbe25e7.js",
-          "hash": "9915086003813462481"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/products/page-00163fc6d9dbc42f.js",
+          "hash": "13877950594047757790"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/page-59e4b39f08f8f157.js",
-          "hash": "4975334896055190262"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/stock/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/products/[id]/edit/page-565fece7d9d78221.js",
-          "hash": "17984655520424651843"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/stock/page-dcc6c9365b921f8c.js",
+          "hash": "12371844555194946599"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/products/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/users/[id]/password/page-a84e7612c6702ad1.js",
+          "hash": "12426940320589516665"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/products/new/page-c3799c4a055709a7.js",
-          "hash": "10542174319628410623"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/users/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/products/page-d264c33a47fbb77b.js",
-          "hash": "10111714490705911800"
+          "file": "apps/admin/.next-build/static/chunks/app/(admin)/users/page-a84e7612c6702ad1.js",
+          "hash": "12426940320589516665"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/stock/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/_not-found/page-cd5f30ea64554f6e.js",
+          "hash": "16393150755136668842"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/stock/page-cab01ce49786b702.js",
-          "hash": "6349118664796660231"
+          "file": "apps/admin/.next-build/static/chunks/app/api/auth/[...nextauth]/route-6c1d1e52da5ff5d9.js",
+          "hash": "6402836339764647668"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/users/[id]/password/page-6737cdd8f82c696b.js",
-          "hash": "4603687853741694681"
+          "file": "apps/admin/.next-build/static/chunks/app/api/uploads/product/route-6c1d1e52da5ff5d9.js",
+          "hash": "6402836339764647668"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/users/loading-6f8d3b0751d60ff2.js",
-          "hash": "11630477636870691330"
+          "file": "apps/admin/.next-build/static/chunks/app/categories/[id]/edit/page-559fb0cd8f555751.js",
+          "hash": "8881881726075708203"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/app/users/page-6737cdd8f82c696b.js",
-          "hash": "4603687853741694681"
+          "file": "apps/admin/.next-build/static/chunks/app/categories/new/page-559fb0cd8f555751.js",
+          "hash": "8881881726075708203"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/framework-497ae3481ac10fef.js",
-          "hash": "10198628704066250313"
+          "file": "apps/admin/.next-build/static/chunks/app/dashboard/page-9d48a9c51235650d.js",
+          "hash": "10669345707036327050"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/main-a5cf4a1880e14afb.js",
-          "hash": "13573345450958084634"
+          "file": "apps/admin/.next-build/static/chunks/app/error-ba7fa3520a7b32c5.js",
+          "hash": "8132570299782401738"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/main-app-a02c812fb6fd3eee.js",
-          "hash": "15999558737483340650"
+          "file": "apps/admin/.next-build/static/chunks/app/global-error-b94b24119335078e.js",
+          "hash": "3674451509665322784"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/pages/_app-2e239ff05bfdf6d6.js",
-          "hash": "12900079496422283994"
+          "file": "apps/admin/.next-build/static/chunks/app/layout-cce55c910609d86c.js",
+          "hash": "3970453891335970569"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/pages/_error-bda15e7831eec981.js",
-          "hash": "2127933956614893043"
+          "file": "apps/admin/.next-build/static/chunks/app/loading-04a5123b3fb4aadd.js",
+          "hash": "13173596938776634439"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/app/login/page-fe6d5ba9edfc9f64.js",
+          "hash": "1970966896336267661"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/app/page-6c1d1e52da5ff5d9.js",
+          "hash": "6402836339764647668"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/app/stock/page-50679f7ccaff0ba4.js",
+          "hash": "12617743276518462808"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/app/users/[id]/password/page-559fb0cd8f555751.js",
+          "hash": "8881881726075708203"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/app/users/page-559fb0cd8f555751.js",
+          "hash": "8881881726075708203"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/framework-36fdc7d8f35ef658.js",
+          "hash": "6984385492053442033"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/main-app-d3c8b9d7ec312abd.js",
+          "hash": "2913953967680583768"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/main-f7baa73e6735435a.js",
+          "hash": "10032236283579983561"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/pages/_app-c29bd852ea78b7d0.js",
+          "hash": "12252676826103622146"
+        },
+        {
+          "file": "apps/admin/.next-build/static/chunks/pages/_error-9f7b90c40f097e8c.js",
+          "hash": "1473621765707977093"
         },
         {
           "file": "apps/admin/.next-build/static/chunks/polyfills-42372ed130431b0a.js",
           "hash": "8152964857117933876"
         },
         {
-          "file": "apps/admin/.next-build/static/chunks/webpack-ccb7aae5cb7509e0.js",
-          "hash": "283177224609718157"
+          "file": "apps/admin/.next-build/static/chunks/webpack-3c67842bbeda050e.js",
+          "hash": "1330278034871739740"
         },
         {
-          "file": "apps/admin/.next-build/static/css/46187bfac2e8086d.css",
-          "hash": "2684332847439366949"
+          "file": "apps/admin/.next-build/static/css/b62367b8aded6157.css",
+          "hash": "10333719189535139037"
         },
         {
-          "file": "apps/admin/.next-build/static/vnxz6KKtYO6e3qytUh9Nz/_buildManifest.js",
-          "hash": "11192063921914331102"
+          "file": "apps/admin/.next-build/static/e0ngH3y42ealX_64ybUBw/_buildManifest.js",
+          "hash": "14257990952036223067"
         },
         {
-          "file": "apps/admin/.next-build/static/vnxz6KKtYO6e3qytUh9Nz/_ssgManifest.js",
+          "file": "apps/admin/.next-build/static/e0ngH3y42ealX_64ybUBw/_ssgManifest.js",
           "hash": "2285259522902979167"
         },
         {
           "file": "apps/admin/.next-build/trace",
-          "hash": "7572005994124043970"
+          "hash": "5876599208396924766"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/categories/[id]/edit/page.ts",
+          "hash": "10850478998560969610"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/categories/new/page.ts",
+          "hash": "3007164526180735758"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/categories/page.ts",
+          "hash": "6878766799746180259"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/dashboard/page.ts",
+          "hash": "14706369227115864659"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/products/[id]/edit/page.ts",
+          "hash": "10370049097132967736"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/products/new/page.ts",
+          "hash": "12036775534127770482"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/products/page.ts",
+          "hash": "11226835628708316207"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/stock/page.ts",
+          "hash": "4544336625994530546"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/users/[id]/password/page.ts",
+          "hash": "8494844570024248843"
+        },
+        {
+          "file": "apps/admin/.next-build/types/app/(admin)/users/page.ts",
+          "hash": "8154456366047261594"
         },
         {
           "file": "apps/admin/.next-build/types/app/api/auth/[...nextauth]/route.ts",
@@ -879,52 +971,12 @@
           "hash": "9617280649278984267"
         },
         {
-          "file": "apps/admin/.next-build/types/app/categories/[id]/edit/page.ts",
-          "hash": "17457584046611614420"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/categories/new/page.ts",
-          "hash": "7126341475000108477"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/categories/page.ts",
-          "hash": "14977143195892287686"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/dashboard/page.ts",
-          "hash": "16709639833496804575"
-        },
-        {
           "file": "apps/admin/.next-build/types/app/login/page.ts",
           "hash": "6428050104384836516"
         },
         {
           "file": "apps/admin/.next-build/types/app/page.ts",
           "hash": "2138378125299348101"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/products/[id]/edit/page.ts",
-          "hash": "17367155682596261543"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/products/new/page.ts",
-          "hash": "5530861525632269692"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/products/page.ts",
-          "hash": "14225854382099359766"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/stock/page.ts",
-          "hash": "3754876415397081631"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/users/[id]/password/page.ts",
-          "hash": "434693761934287707"
-        },
-        {
-          "file": "apps/admin/.next-build/types/app/users/page.ts",
-          "hash": "16698113659062618238"
         },
         {
           "file": "apps/admin/.next-build/types/cache-life.d.ts",
@@ -940,7 +992,7 @@
         },
         {
           "file": "apps/admin/.next-build/types/validator.ts",
-          "hash": "17106106017313290848"
+          "hash": "12800132031997099407"
         },
         {
           "file": "apps/admin/actions/categories.ts",
@@ -948,15 +1000,59 @@
         },
         {
           "file": "apps/admin/actions/products.ts",
-          "hash": "3978668348182302690"
+          "hash": "16168736543518291698"
         },
         {
           "file": "apps/admin/actions/stock.ts",
-          "hash": "10352948092480502219"
+          "hash": "5311817946991067851"
         },
         {
           "file": "apps/admin/actions/users.ts",
           "hash": "9355481052485708236"
+        },
+        {
+          "file": "apps/admin/app/(admin)/categories/[id]/edit/page.tsx",
+          "hash": "16319087385073995576"
+        },
+        {
+          "file": "apps/admin/app/(admin)/categories/new/page.tsx",
+          "hash": "18171638884806615976"
+        },
+        {
+          "file": "apps/admin/app/(admin)/categories/page.tsx",
+          "hash": "17556163912476629003"
+        },
+        {
+          "file": "apps/admin/app/(admin)/dashboard/page.tsx",
+          "hash": "2493924149342365561"
+        },
+        {
+          "file": "apps/admin/app/(admin)/layout.tsx",
+          "hash": "7632180436435939479"
+        },
+        {
+          "file": "apps/admin/app/(admin)/products/[id]/edit/page.tsx",
+          "hash": "15205405139973970928"
+        },
+        {
+          "file": "apps/admin/app/(admin)/products/new/page.tsx",
+          "hash": "16967104380230530244"
+        },
+        {
+          "file": "apps/admin/app/(admin)/products/page.tsx",
+          "hash": "1079786050463558265"
+        },
+        {
+          "file": "apps/admin/app/(admin)/stock/page.tsx",
+          "hash": "1416726528734323027"
+        },
+        {
+          "file": "apps/admin/app/(admin)/users/[id]/password/page.tsx",
+          "hash": "9716367796995952592"
+        },
+        {
+          "file": "apps/admin/app/(admin)/users/page.tsx",
+          "hash": "13642168091078100628"
         },
         {
           "file": "apps/admin/app/api/auth/[...nextauth]/route.ts",
@@ -965,30 +1061,6 @@
         {
           "file": "apps/admin/app/api/uploads/product/route.ts",
           "hash": "10283683276122552922"
-        },
-        {
-          "file": "apps/admin/app/categories/[id]/edit/page.tsx",
-          "hash": "9672510753274118263"
-        },
-        {
-          "file": "apps/admin/app/categories/loading.tsx",
-          "hash": "4329886495718830647"
-        },
-        {
-          "file": "apps/admin/app/categories/new/page.tsx",
-          "hash": "10666777667512148898"
-        },
-        {
-          "file": "apps/admin/app/categories/page.tsx",
-          "hash": "3458631121281936525"
-        },
-        {
-          "file": "apps/admin/app/dashboard/loading.tsx",
-          "hash": "15636674199142048880"
-        },
-        {
-          "file": "apps/admin/app/dashboard/page.tsx",
-          "hash": "7446169629358820803"
         },
         {
           "file": "apps/admin/app/error.tsx",
@@ -1023,42 +1095,6 @@
           "hash": "17913365671983664074"
         },
         {
-          "file": "apps/admin/app/products/[id]/edit/page.tsx",
-          "hash": "34506532509154154"
-        },
-        {
-          "file": "apps/admin/app/products/loading.tsx",
-          "hash": "14799477800896383830"
-        },
-        {
-          "file": "apps/admin/app/products/new/page.tsx",
-          "hash": "12324162943624184973"
-        },
-        {
-          "file": "apps/admin/app/products/page.tsx",
-          "hash": "13926422895368116138"
-        },
-        {
-          "file": "apps/admin/app/stock/loading.tsx",
-          "hash": "6286637870615043661"
-        },
-        {
-          "file": "apps/admin/app/stock/page.tsx",
-          "hash": "3553303532315482001"
-        },
-        {
-          "file": "apps/admin/app/users/[id]/password/page.tsx",
-          "hash": "9671124704039712693"
-        },
-        {
-          "file": "apps/admin/app/users/loading.tsx",
-          "hash": "861633201594535989"
-        },
-        {
-          "file": "apps/admin/app/users/page.tsx",
-          "hash": "10743319764269937527"
-        },
-        {
           "file": "apps/admin/auth.config.ts",
           "hash": "9755332099966447553"
         },
@@ -1071,8 +1107,12 @@
           "hash": "7674305189470418045"
         },
         {
+          "file": "apps/admin/components/admin-chrome.tsx",
+          "hash": "6804497748635945946"
+        },
+        {
           "file": "apps/admin/components/admin-shell.tsx",
-          "hash": "17222559900340812442"
+          "hash": "6362366189345359859"
         },
         {
           "file": "apps/admin/components/data-table.tsx",
@@ -1108,7 +1148,7 @@
         },
         {
           "file": "apps/admin/components/products/ProductForm.tsx",
-          "hash": "6612387643092176368"
+          "hash": "12604331230031444299"
         },
         {
           "file": "apps/admin/components/products/ProductGalleryUploader.tsx",
@@ -1117,6 +1157,10 @@
         {
           "file": "apps/admin/components/products/ProductImageUploader.tsx",
           "hash": "7771827159640304286"
+        },
+        {
+          "file": "apps/admin/components/query-form.tsx",
+          "hash": "3178809542105916683"
         },
         {
           "file": "apps/admin/components/row-action-menu.tsx",
@@ -1244,7 +1288,7 @@
         },
         {
           "file": "apps/admin/project.json",
-          "hash": "12087758832893913521"
+          "hash": "15798945249472553879"
         },
         {
           "file": "apps/admin/tailwind.config.ts",
@@ -1257,6 +1301,32 @@
         {
           "file": "apps/admin/types/next-auth.d.ts",
           "hash": "9995212817878011331"
+        }
+      ],
+      "@eco-bright/db": [
+        {
+          "file": "packages/db/package.json",
+          "hash": "4774756212527276402"
+        },
+        {
+          "file": "packages/db/prisma/schema.prisma",
+          "hash": "5315309990202460819"
+        },
+        {
+          "file": "packages/db/prisma/seed.ts",
+          "hash": "11561100709048716199"
+        },
+        {
+          "file": "packages/db/src/client.ts",
+          "hash": "12090966785370622874"
+        },
+        {
+          "file": "packages/db/src/index.ts",
+          "hash": "4581837691723598362"
+        },
+        {
+          "file": "packages/db/tsconfig.json",
+          "hash": "9877332579136932751"
         }
       ],
       "@eco-bright/validators": [
@@ -1291,32 +1361,6 @@
         {
           "file": "packages/validators/tsconfig.json",
           "hash": "9007699802873219563"
-        }
-      ],
-      "@eco-bright/db": [
-        {
-          "file": "packages/db/package.json",
-          "hash": "4774756212527276402"
-        },
-        {
-          "file": "packages/db/prisma/schema.prisma",
-          "hash": "5315309990202460819"
-        },
-        {
-          "file": "packages/db/prisma/seed.ts",
-          "hash": "11561100709048716199"
-        },
-        {
-          "file": "packages/db/src/client.ts",
-          "hash": "12090966785370622874"
-        },
-        {
-          "file": "packages/db/src/index.ts",
-          "hash": "4581837691723598362"
-        },
-        {
-          "file": "packages/db/tsconfig.json",
-          "hash": "9877332579136932751"
         }
       ]
     }

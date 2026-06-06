@@ -1,5 +1,5 @@
 function getDetailImages(imageUrls: string[]) {
-  return imageUrls.filter(Boolean);
+  return Array.from(new Set(imageUrls.map((url) => url.trim()).filter(Boolean)));
 }
 
 export function ProductImageStack({
@@ -24,8 +24,8 @@ export function ProductImageStack({
       </div>
       {detailImages.length > 0 ? (
         <div className="product-detail-images">
-          {detailImages.slice(0, 4).map((url) => (
-            <div key={url} className="product-detail-image">
+          {detailImages.slice(0, 4).map((url, index) => (
+            <div key={`${url}-${index}`} className="product-detail-image">
               <img src={url} alt={`${title} detail`} className="product-detail-image__img" />
             </div>
           ))}

@@ -1,0 +1,179 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1543ms
+ [32m[1m✓[22m[39m Compiled /middleware in 119ms (115 modules)
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 1391ms (1268 modules)
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+    at async ProductsPage (app/products/page.tsx:70:37)
+[0m [90m 68 |[39m   }[33m;[39m
+ [90m 69 |[39m
+[31m[1m>[22m[39m[90m 70 |[39m   [36mconst[39m [totalProducts[33m,[39m products] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                     [31m[1m^[22m[39m
+ [90m 71 |[39m     db[33m.[39mproduct[33m.[39mcount({ where })[33m,[39m
+ [90m 72 |[39m     db[33m.[39mproduct[33m.[39mfindMany({
+ [90m 73 |[39m       where[33m,[39m[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2466259181'[39m
+}
+ GET /products [32m200[39m in 5842ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled in 4.7s (1282 modules)
+ GET /products [32m200[39m in 959ms
+ [32m[1m✓[22m[39m Compiled in 4.1s (1282 modules)
+ GET /products [32m200[39m in 688ms
+ GET /products [32m200[39m in 788ms
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 517ms (1288 modules)
+[31mprisma:error[39m 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
+    id: "solar-flood-light"
+  },
+  include: {
+    variants: {
+    ~~~~~~~~
+      orderBy: {
+        createdAt: "asc"
+      },
+      include: {
+        attributeLinks: {
+          include: {
+            productAttributeValue: {
+              include: {
+                productAttribute: true
+              }
+            }
+          }
+        }
+      }
+    },
+?   createdBy?: true,
+?   stockMovements?: true
+  }
+}
+
+Unknown field `variants` for include statement on model `Product`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
+    id: "solar-flood-light"
+  },
+  include: {
+    variants: {
+    ~~~~~~~~
+      orderBy: {
+        createdAt: "asc"
+      },
+      include: {
+        attributeLinks: {
+          include: {
+            productAttributeValue: {
+              include: {
+                productAttribute: true
+              }
+            }
+          }
+        }
+      }
+    },
+?   createdBy?: true,
+?   stockMovements?: true
+  }
+}
+
+Unknown field `variants` for include statement on model `Product`. Available options are marked with ?.
+    at async EditProductPage (app/products/[id]/edit/page.tsx:22:33)
+[0m [90m 20 |[39m   [36mconst[39m { error } [33m=[39m [36mawait[39m searchParams[33m;[39m
+ [90m 21 |[39m
+[31m[1m>[22m[39m[90m 22 |[39m   [36mconst[39m [product[33m,[39m categories] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                 [31m[1m^[22m[39m
+ [90m 23 |[39m     db[33m.[39mproduct[33m.[39mfindUnique({
+ [90m 24 |[39m       where[33m:[39m { id }[33m,[39m
+ [90m 25 |[39m       include[33m:[39m {[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2103789399'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 1228ms
+^C[?25h

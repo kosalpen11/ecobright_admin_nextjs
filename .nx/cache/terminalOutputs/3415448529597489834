@@ -1,0 +1,23 @@
+> sh -c 'rm -rf apps/admin/.next-build && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'
+
+   ▲ Next.js 15.5.18
+
+(node:88450) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:88495) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 9.0s
+   Linting and checking validity of types ...
+Failed to compile.
+
+.next/types/app/categories/new/page.ts:2:24
+Type error: Cannot find module '../../../../../app/categories/new/page.js' or its corresponding type declarations.
+
+[0m [90m 1 |[39m [90m// File: /Users/kosalpen/Documents/admin-eco-bright/apps/admin/app/categories/new/page.tsx[39m
+[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33m*[39m [36mas[39m entry [36mfrom[39m [32m'../../../../../app/categories/new/page.js'[39m
+ [90m   |[39m                        [31m[1m^[22m[39m
+ [90m 3 |[39m [36mimport[39m type { [33mResolvingMetadata[39m[33m,[39m [33mResolvingViewport[39m } [36mfrom[39m [32m'next/dist/lib/metadata/types/metadata-interface.js'[39m
+ [90m 4 |[39m
+ [90m 5 |[39m type [33mTEntry[39m [33m=[39m [36mtypeof[39m [36mimport[39m([32m'../../../../../app/categories/new/page.js'[39m)[0m
+Next.js build worker exited with code: 1 and signal: null

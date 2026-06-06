@@ -1,0 +1,126 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1519ms
+ [32m[1m✓[22m[39m Compiled /middleware in 114ms (115 modules)
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 1487ms (1271 modules)
+[31mprisma:error[39m 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
+    id: "solar-flood-light"
+  },
+  include: {
+    variants: {
+    ~~~~~~~~
+      orderBy: {
+        createdAt: "asc"
+      },
+      include: {
+        attributeLinks: {
+          include: {
+            productAttributeValue: {
+              include: {
+                productAttribute: true
+              }
+            }
+          }
+        }
+      }
+    },
+?   createdBy?: true,
+?   stockMovements?: true
+  }
+}
+
+Unknown field `variants` for include statement on model `Product`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findUnique()` invocation:
+
+{
+  where: {
+    id: "solar-flood-light"
+  },
+  include: {
+    variants: {
+    ~~~~~~~~
+      orderBy: {
+        createdAt: "asc"
+      },
+      include: {
+        attributeLinks: {
+          include: {
+            productAttributeValue: {
+              include: {
+                productAttribute: true
+              }
+            }
+          }
+        }
+      }
+    },
+?   createdBy?: true,
+?   stockMovements?: true
+  }
+}
+
+Unknown field `variants` for include statement on model `Product`. Available options are marked with ?.
+    at async EditProductPage (app/products/[id]/edit/page.tsx:22:33)
+[0m [90m 20 |[39m   [36mconst[39m { error } [33m=[39m [36mawait[39m searchParams[33m;[39m
+ [90m 21 |[39m
+[31m[1m>[22m[39m[90m 22 |[39m   [36mconst[39m [product[33m,[39m categories] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                 [31m[1m^[22m[39m
+ [90m 23 |[39m     db[33m.[39mproduct[33m.[39mfindUnique({
+ [90m 24 |[39m       where[33m:[39m { id }[33m,[39m
+ [90m 25 |[39m       include[33m:[39m {[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2103789399'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 6375ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled in 4.6s (1285 modules)
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 174ms
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 159ms
+ [32m[1m✓[22m[39m Compiled in 4.3s (1285 modules)
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:32:23)
+[0m [90m 30 |[39m       }
+ [90m 31 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 32 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 33 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 34 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 35 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 155ms
+^C[?25h

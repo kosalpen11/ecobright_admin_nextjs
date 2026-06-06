@@ -1,0 +1,56 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 6.3s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 1116ms (991 modules)
+ GET / [32m200[39m in 1599ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 118ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1073ms (1251 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1766ms
+ GET / [32m200[39m in 173ms
+ GET /dashboard [32m200[39m in 4703ms
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 632ms (1287 modules)
+ GET /products [32m200[39m in 1537ms
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 524ms (1307 modules)
+ [31m[1m⨯[22m[39m TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EditProductPage (app/products/[id]/edit/page.tsx:28:23)
+[0m [90m 26 |[39m       select[33m:[39m { id[33m:[39m [36mtrue[39m[33m,[39m name[33m:[39m [36mtrue[39m[33m,[39m slug[33m:[39m [36mtrue[39m }
+ [90m 27 |[39m     })[33m,[39m
+[31m[1m>[22m[39m[90m 28 |[39m     db[33m.[39mproductVariant[33m.[39mfindMany({
+ [90m    |[39m                       [31m[1m^[22m[39m
+ [90m 29 |[39m       where[33m:[39m { productId[33m:[39m id }[33m,[39m
+ [90m 30 |[39m       orderBy[33m:[39m { createdAt[33m:[39m [32m"asc"[39m }[33m,[39m
+ [90m 31 |[39m       include[33m:[39m {[0m {
+  digest: [32m'3772205591'[39m
+}
+ GET /products/solar-flood-light/edit [32m200[39m in 1510ms
+ [32m[1m✓[22m[39m Compiled in 4.7s (1317 modules)
+ GET /products/solar-flood-light/edit [32m200[39m in 974ms
+ [32m[1m✓[22m[39m Compiled in 4.5s (1317 modules)
+ GET /products/solar-flood-light/edit [32m200[39m in 1005ms
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+[31mprisma:error[39m Error in PostgreSQL connection: Error { kind: Closed, cause: None }
+^C[?25h

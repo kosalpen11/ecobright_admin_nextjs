@@ -68,6 +68,25 @@ function parseJsonPayload<T>(value: string | undefined, schema: z.ZodSchema<T>, 
   return parsed.data;
 }
 
+function hasVariantModels(client: unknown) {
+  const value = client as Record<string, unknown> | null | undefined;
+
+  return Boolean(
+    value &&
+      typeof value.productVariant === "object" &&
+      value.productVariant &&
+      typeof (value.productVariant as { findMany?: unknown }).findMany === "function" &&
+      typeof value.productAttribute === "object" &&
+      value.productAttribute &&
+      typeof (value.productAttribute as { findMany?: unknown }).findMany === "function" &&
+      typeof value.productAttributeValue === "object" &&
+      value.productAttributeValue &&
+      typeof (value.productAttributeValue as { findMany?: unknown }).findMany === "function" &&
+      typeof value.productVariantAttributeValue === "object" &&
+      value.productVariantAttributeValue
+  );
+}
+
 async function getCategoryValues(categoryId: string) {
   const category = await db.category.findUnique({
     where: { id: categoryId }
@@ -130,6 +149,10 @@ async function prepareAttributeCache(
   attributes: ParsedAttributeDraft[],
   variants: ParsedVariantDraft[]
 ) {
+  if (!hasVariantModels(tx)) {
+    return;
+  }
+
   const normalizedValues = collectNormalizedAttributeValues(attributes, variants);
   const attributeNames = Array.from(
     new Set(normalizedValues.map((item) => item.attributeName))
@@ -210,6 +233,10 @@ async function syncVariantAttributeSelections(
   variantId: string,
   selections: ParsedVariantDraft["attributeSelections"]
 ) {
+  if (!hasVariantModels(tx)) {
+    return;
+  }
+
   await tx.productVariantAttributeValue.deleteMany({
     where: { productVariantId: variantId }
   });
@@ -254,6 +281,13 @@ async function syncProductVariants(
   productId: string,
   variants: ParsedVariantDraft[]
 ) {
+  if (!hasVariantModels(tx)) {
+    return {
+      totalStock: 0,
+      hasVariants: false
+    };
+  }
+
   const existingVariants = await tx.productVariant.findMany({
     where: { productId },
     select: { id: true }
@@ -359,18 +393,19 @@ async function syncProductVariants(
     await syncVariantAttributeSelections(tx, cache, variantId, variant.attributeSelections);
   }
 
-  const persistedVariants = await tx.productVariant.findMany({
+  const aggregate = await tx.productVariant.aggregate({
     where: { productId },
-    select: {
+    _sum: {
       stockQty: true
+    },
+    _count: {
+      _all: true
     }
   });
 
-  const totalStock = persistedVariants.reduce((sum, variant) => sum + variant.stockQty, 0);
-
   return {
-    totalStock,
-    hasVariants: persistedVariants.length > 0
+    totalStock: aggregate._sum.stockQty ?? 0,
+    hasVariants: aggregate._count._all > 0
   };
 }
 
@@ -383,8 +418,10 @@ async function parseProductSubmission(formData: FormData) {
     oldPrice: formData.get("oldPrice"),
     currency: formData.get("currency"),
     stockQty: formData.get("stockQty"),
-    imageUrl: formData.get("imageUrl"),
-    imageUrls: formData.get("imageUrls"),
+    // accept snake_case from the form (`image_url`, `image_urls`),
+    // fall back to legacy camelCase (`imageUrl`, `imageUrls`)
+    imageUrl: formData.get("image_url") ?? formData.get("imageUrl"),
+    imageUrls: formData.get("image_urls") ?? formData.get("imageUrls"),
     badge: formData.get("badge"),
     tags: formData.get("tags"),
     useCase: formData.get("useCase"),
@@ -443,8 +480,11 @@ export async function createProductAction(formData: FormData) {
         attributeIds: new Map(),
         attributeValueIds: new Map()
       };
+      const supportsVariants = hasVariantModels(tx);
 
-      await prepareAttributeCache(tx, attributeCache, submission.attributes, submission.variants);
+      if (supportsVariants) {
+        await prepareAttributeCache(tx, attributeCache, submission.attributes, submission.variants);
+      }
 
       await tx.product.create({
         data: {
@@ -478,7 +518,7 @@ export async function createProductAction(formData: FormData) {
         }
       });
 
-      if (submission.variants.length > 0) {
+      if (supportsVariants && submission.variants.length > 0) {
         const variantSummary = await syncProductVariants(
           tx,
           attributeCache,
@@ -525,8 +565,11 @@ export async function updateProductAction(id: string, formData: FormData) {
         attributeIds: new Map(),
         attributeValueIds: new Map()
       };
+      const supportsVariants = hasVariantModels(tx);
 
-      await prepareAttributeCache(tx, attributeCache, submission.attributes, submission.variants);
+      if (supportsVariants) {
+        await prepareAttributeCache(tx, attributeCache, submission.attributes, submission.variants);
+      }
 
       await tx.product.update({
         where: { id },
@@ -559,25 +602,27 @@ export async function updateProductAction(id: string, formData: FormData) {
         }
       });
 
-      const variantSummary = await syncProductVariants(
-        tx,
-        attributeCache,
-        id,
-        submission.variants
-      );
+      if (supportsVariants) {
+        const variantSummary = await syncProductVariants(
+          tx,
+          attributeCache,
+          id,
+          submission.variants
+        );
 
-      await tx.product.update({
-        where: { id },
-        data: variantSummary.hasVariants
-          ? {
-              stockQty: variantSummary.totalStock,
-              inStock: variantSummary.totalStock > 0
-            }
-          : {
-              stockQty: submission.product.stockQty,
-              inStock: submission.product.inStock === "true"
-            }
-      });
+        await tx.product.update({
+          where: { id },
+          data: variantSummary.hasVariants
+            ? {
+                stockQty: variantSummary.totalStock,
+                inStock: variantSummary.totalStock > 0
+              }
+            : {
+                stockQty: submission.product.stockQty,
+                inStock: submission.product.inStock === "true"
+              }
+        });
+      }
     }, {
       timeout: 20000,
       maxWait: 5000

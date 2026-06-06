@@ -6,6 +6,7 @@
   "scripts": {
     "build": "prisma generate && nx build admin && rm -rf .next && cp -R apps/admin/.next-build .next",
     "dev": "nx dev admin",
+    "start": "sh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next start -p 3000'",
     "nx": "nx",
     "prisma": "prisma",
     "prisma:generate": "prisma generate",

@@ -1,0 +1,32 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 2s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.2s (1005 modules)
+ GET / [32m200[39m in 3629ms
+ [32m[1m✓[22m[39m Compiled /middleware in 136ms (115 modules)
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 3.1s (1275 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 3367ms
+ GET /dashboard [32m200[39m in 4762ms
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 514ms (1300 modules)
+ GET /products [32m200[39m in 1252ms
+ GET /products [32m200[39m in 301ms
+ [32m[1m✓[22m[39m Compiled /products/new in 415ms (1320 modules)
+ GET /products/new [32m200[39m in 1138ms
+ GET /products [32m200[39m in 747ms
+ GET /products/new [32m200[39m in 1072ms
+ [32m[1m✓[22m[39m Compiled /categories in 340ms (1329 modules)
+ GET /categories [32m200[39m in 2437ms
+ [32m[1m✓[22m[39m Compiled in 415ms (1343 modules)
+ GET /categories [32m200[39m in 1700ms
+^C[?25h

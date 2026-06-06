@@ -1,0 +1,114 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1546ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.4s (1005 modules)
+ GET / [32m200[39m in 3873ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 101ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 2.5s (1265 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 2835ms
+ GET /dashboard [32m200[39m in 5032ms
+ [32m[1m✓[22m[39m Compiled /products in 437ms (1287 modules)
+ GET /products [32m200[39m in 1348ms
+ [32m[1m✓[22m[39m Compiled /stock in 425ms (1350 modules)
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: Decimal, oldPrice: ..., currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: ..., oldPrice: Decimal, currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: Decimal, oldPrice: ..., currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: ..., oldPrice: Decimal, currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                                        ^^^^^^^
+ GET /stock [32m200[39m in 3745ms
+ GET /products [32m200[39m in 876ms
+ [37m[1m○[22m[39m Compiling /products/[id]/edit ...
+ [32m[1m✓[22m[39m Compiled /products/[id]/edit in 830ms (1366 modules)
+ GET /products/solar-flood-light/edit [32m200[39m in 3242ms
+ GET /products [32m200[39m in 1026ms
+ POST /products/solar-flood-light/edit [34m303[39m in 10364ms
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: Decimal, oldPrice: ..., currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: ..., oldPrice: Decimal, currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                                        ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: Decimal, oldPrice: ..., currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                         ^^^^^^^
+Only plain objects can be passed to Client Components from Server Components. Decimal objects are not supported.
+  {id: ..., productId: ..., sku: ..., title: ..., price: ..., oldPrice: Decimal, currency: ..., stockQty: ..., lowStockAlert: ..., imageUrl: ..., sortOrder: ..., isActive: ..., createdAt: ..., updatedAt: ..., attributeLinks: ...}
+                                                                        ^^^^^^^
+ GET /stock [32m200[39m in 1535ms
+ [32m[1m✓[22m[39m Compiled in 632ms (1380 modules)
+ GET /stock [32m200[39m in 1018ms
+ [32m[1m✓[22m[39m Compiled in 311ms (1380 modules)
+ GET /stock [32m200[39m in 2439ms
+ [32m[1m✓[22m[39m Compiled in 426ms (1380 modules)
+ GET /stock [32m200[39m in 2808ms
+ [32m[1m✓[22m[39m Compiled in 1886ms (392 modules)
+ GET /stock [32m200[39m in 4923ms
+ [32m[1m✓[22m[39m Compiled in 639ms (1380 modules)
+ GET /stock [32m200[39m in 2478ms
+ [32m[1m✓[22m[39m Compiled in 1600ms (1380 modules)
+ GET /stock [32m200[39m in 2294ms
+ [32m[1m✓[22m[39m Compiled in 391ms (1380 modules)
+ GET /stock [32m200[39m in 1799ms
+ GET /stock [32m200[39m in 2075ms
+ [37m[1m○[22m[39m Compiling /users ...
+ [32m[1m✓[22m[39m Compiled /users in 2.2s (1390 modules)
+ GET /users [32m200[39m in 5130ms
+ GET /users [32m200[39m in 2826ms
+ [32m[1m✓[22m[39m Compiled in 602ms (1390 modules)
+ GET /users [32m200[39m in 905ms
+ GET /stock [32m200[39m in 3130ms
+ [32m[1m✓[22m[39m Compiled /categories in 464ms (1396 modules)
+ GET /categories [32m200[39m in 2134ms
+ GET /categories [32m200[39m in 2767ms
+ [37m[1m○[22m[39m Compiling /categories/new ...
+ [32m[1m✓[22m[39m Compiled /categories/new in 3.1s (1398 modules)
+ GET /categories/new [32m200[39m in 3205ms
+ GET /categories/new [32m200[39m in 37ms
+ GET /categories [32m200[39m in 1556ms
+ POST /categories/new [34m303[39m in 2762ms
+ GET /categories [32m200[39m in 887ms
+ POST /categories [34m303[39m in 2478ms
+ GET /users [32m200[39m in 1047ms
+ GET /users [32m200[39m in 1075ms
+ GET /dashboard [32m200[39m in 1069ms
+ GET /products [32m200[39m in 695ms
+ GET /categories [32m200[39m in 1658ms
+ GET /stock [32m200[39m in 3111ms
+ GET /users [32m200[39m in 729ms
+ [32m[1m✓[22m[39m Compiled in 778ms (1381 modules)
+ GET /users [32m200[39m in 973ms
+ [32m[1m✓[22m[39m Compiled in 130ms (393 modules)
+ GET /users [32m200[39m in 373ms
+ [32m[1m✓[22m[39m Compiled in 559ms (1381 modules)
+ GET /users [32m200[39m in 731ms
+ [32m[1m✓[22m[39m Compiled in 384ms (1381 modules)
+ GET /users [32m200[39m in 395ms
+ [32m[1m✓[22m[39m Compiled in 364ms (1381 modules)
+ GET /users [32m200[39m in 755ms
+ GET /stock [32m200[39m in 5249ms
+ GET /users [32m200[39m in 2434ms
+ GET /users [32m200[39m in 952ms
+ GET /stock [32m200[39m in 3252ms
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 672ms (993 modules)
+ GET /products [32m200[39m in 1449ms
+ [32m[1m✓[22m[39m Compiled /dashboard in 455ms (1005 modules)
+ GET /dashboard [32m200[39m in 3311ms
+^C[?25h

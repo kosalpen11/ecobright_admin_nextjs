@@ -7,6 +7,17 @@ import { db } from "@eco-bright/db";
 import { stockMovementSchema } from "@eco-bright/validators/stock";
 import { requireAuth } from "@/lib/session";
 
+function hasVariantModels(client: unknown) {
+  const value = client as Record<string, unknown> | null | undefined;
+
+  return Boolean(
+    value &&
+      typeof value.productVariant === "object" &&
+      value.productVariant &&
+      typeof (value.productVariant as { findMany?: unknown }).findMany === "function"
+  );
+}
+
 function getMovementQuantity(
   type: StockMovementType,
   previousStock: number,
@@ -61,23 +72,33 @@ export async function createStockMovementAction(formData: FormData) {
       const movementType = parsed.data.type as StockMovementType;
       const product = await tx.product.findUnique({
         where: { id: parsed.data.productId },
-        include: {
-          variants: {
-            orderBy: { createdAt: "asc" },
-            select: {
-              id: true,
-              stockQty: true
-            }
-          }
+        select: {
+          id: true,
+          stockQty: true
         }
       });
+
+      const supportsVariants = hasVariantModels(tx);
+      const variants =
+        supportsVariants && product
+          ? await tx.productVariant.findMany({
+              where: {
+                productId: product.id
+              },
+              orderBy: { createdAt: "asc" },
+              select: {
+                id: true,
+                stockQty: true
+              }
+            })
+          : [];
 
       if (!product) {
         throw new Error("Product not found.");
       }
 
       const requestedQty = parsed.data.quantity;
-      const hasVariants = product.variants.length > 0;
+      const hasVariants = variants.length > 0;
       const variantId = parsed.data.productVariantId?.trim() || null;
 
       if (hasVariants && !variantId) {
@@ -89,7 +110,7 @@ export async function createStockMovementAction(formData: FormData) {
       }
 
       if (variantId) {
-        const variant = product.variants.find((item) => item.id === variantId);
+        const variant = variants.find((item) => item.id === variantId);
 
         if (!variant) {
           throw new Error("Variant not found for this product.");

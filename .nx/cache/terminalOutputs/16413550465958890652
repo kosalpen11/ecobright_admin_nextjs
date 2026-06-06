@@ -1,0 +1,393 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1590ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 8.3s (1005 modules)
+ GET / [32m200[39m in 8790ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [37m[1m○[22m[39m Compiling /login ...
+ [32m[1m✓[22m[39m Compiled /login in 6.4s (1175 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /login [32m200[39m in 6705ms
+ GET / [32m200[39m in 36ms
+ GET /login [32m200[39m in 68ms
+ [32m[1m✓[22m[39m Compiled /api/auth/[...nextauth] in 257ms (1166 modules)
+ GET /api/auth/providers [32m200[39m in 786ms
+ GET /api/auth/csrf [32m200[39m in 7ms
+[31m[auth][error][0m CredentialsSignin: Read more at https://errors.authjs.dev#credentialssignin
+    at Module.callback (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/actions/callback/index.js:246:23)
+    at async AuthInternal (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/lib/index.js:70:24)
+    at async Auth (webpack-internal:///(rsc)/../../node_modules/.pnpm/@auth+core@0.41.2/node_modules/@auth/core/index.js:130:34)
+    at async AppRouteRouteModule.do (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:38696)
+    at async AppRouteRouteModule.handle (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:5:45978)
+    at async responseGenerator (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:203:38)
+    at async AppRouteRouteModule.handleResponse (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:1:195304)
+    at async handleResponse (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:265:32)
+    at async handler (webpack-internal:///(rsc)/../../node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&page=%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute&appPaths=&pagePath=private-next-app-dir%2Fapi%2Fauth%2F%5B...nextauth%5D%2Froute.ts&appDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2FUsers%2Fkosalpen%2FDocuments%2Fadmin-eco-bright%2Fapps%2Fadmin&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:317:13)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1430:9)
+    at async DevServer.renderPageComponent (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1482:24)
+    at async DevServer.renderToResponseImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1522:32)
+    at async DevServer.pipeImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:1026:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/base-server.js:917:17)
+    at async /Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:400:20
+    at async Span.traceAsyncFn (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/dev/next-dev-server.js:396:24)
+    at async invokeRender (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:437:24)
+    at async requestHandlerImpl (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/router-server.js:485:13)
+    at async Server.requestListener (/Users/kosalpen/Documents/admin-eco-bright/node_modules/.pnpm/next@15.5.18_react-dom@19.2.6_react@19.2.6__react@19.2.6/node_modules/next/dist/server/lib/start-server.js:226:13)
+ POST /api/auth/callback/credentials? [32m200[39m in 2965ms
+ GET /api/auth/providers [32m200[39m in 15ms
+ GET /api/auth/csrf [32m200[39m in 7ms
+ POST /api/auth/callback/credentials? [32m200[39m in 615ms
+ [32m[1m✓[22m[39m Compiled /middleware in 688ms (546 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 760ms (1426 modules)
+ GET /dashboard [32m200[39m in 3499ms
+ GET /dashboard [32m200[39m in 2453ms
+ GET /dashboard [32m200[39m in 2451ms
+ [32m[1m✓[22m[39m Compiled /products in 458ms (1460 modules)
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+    at async ProductsPage (app/products/page.tsx:70:37)
+[0m [90m 68 |[39m   }[33m;[39m
+ [90m 69 |[39m
+[31m[1m>[22m[39m[90m 70 |[39m   [36mconst[39m [totalProducts[33m,[39m products] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                     [31m[1m^[22m[39m
+ [90m 71 |[39m     db[33m.[39mproduct[33m.[39mcount({ where })[33m,[39m
+ [90m 72 |[39m     db[33m.[39mproduct[33m.[39mfindMany({
+ [90m 73 |[39m       where[33m,[39m[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2466259181'[39m
+}
+ GET /products [32m200[39m in 731ms
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+    at async ProductsPage (app/products/page.tsx:70:37)
+[0m [90m 68 |[39m   }[33m;[39m
+ [90m 69 |[39m
+[31m[1m>[22m[39m[90m 70 |[39m   [36mconst[39m [totalProducts[33m,[39m products] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                     [31m[1m^[22m[39m
+ [90m 71 |[39m     db[33m.[39mproduct[33m.[39mcount({ where })[33m,[39m
+ [90m 72 |[39m     db[33m.[39mproduct[33m.[39mfindMany({
+ [90m 73 |[39m       where[33m,[39m[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2466259181'[39m
+}
+ GET /products [32m200[39m in 503ms
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+    at async ProductsPage (app/products/page.tsx:70:37)
+[0m [90m 68 |[39m   }[33m;[39m
+ [90m 69 |[39m
+[31m[1m>[22m[39m[90m 70 |[39m   [36mconst[39m [totalProducts[33m,[39m products] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                     [31m[1m^[22m[39m
+ [90m 71 |[39m     db[33m.[39mproduct[33m.[39mcount({ where })[33m,[39m
+ [90m 72 |[39m     db[33m.[39mproduct[33m.[39mfindMany({
+ [90m 73 |[39m       where[33m,[39m[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2466259181'[39m
+}
+ GET /products [32m200[39m in 118ms
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+ [31m[1m⨯[22m[39m Error [PrismaClientValidationError]: 
+Invalid `prisma.product.findMany()` invocation:
+
+{
+  where: {},
+  orderBy: {
+    updatedAt: "desc"
+  },
+  skip: 0,
+  take: 12,
+  select: {
+    id: true,
+    title: true,
+    imageUrl: true,
+    imageUrls: true,
+    category: true,
+    categoryLabel: true,
+    price: true,
+    oldPrice: true,
+    currency: true,
+    stockQty: true,
+    inStock: true,
+    isActive: true,
+    needsReview: true,
+    updatedAt: true,
+    _count: {
+      select: {
+        variants: true,
+        ~~~~~~~~
+?       stockMovements?: true
+      }
+    }
+  }
+}
+
+Unknown field `variants` for select statement on model `ProductCountOutputType`. Available options are marked with ?.
+    at async ProductsPage (app/products/page.tsx:70:37)
+[0m [90m 68 |[39m   }[33m;[39m
+ [90m 69 |[39m
+[31m[1m>[22m[39m[90m 70 |[39m   [36mconst[39m [totalProducts[33m,[39m products] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m                                     [31m[1m^[22m[39m
+ [90m 71 |[39m     db[33m.[39mproduct[33m.[39mcount({ where })[33m,[39m
+ [90m 72 |[39m     db[33m.[39mproduct[33m.[39mfindMany({
+ [90m 73 |[39m       where[33m,[39m[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  digest: [32m'2466259181'[39m
+}
+ GET /products [32m200[39m in 100ms
+^C[?25h

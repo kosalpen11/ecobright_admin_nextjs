@@ -1,0 +1,24 @@
+> sh -c 'rm -rf apps/admin/.next-build && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'
+
+   ▲ Next.js 15.5.18
+
+(node:83672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:83713) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 8.6s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/stock/page.tsx:253:35
+Type error: Property 'attributeLinks' does not exist on type '{}'.
+
+[0m [90m 251 |[39m     variantLabel[33m:[39m
+ [90m 252 |[39m       [32m"productVariant"[39m [36min[39m movement [33m&&[39m movement[33m.[39mproductVariant
+[31m[1m>[22m[39m[90m 253 |[39m         [33m?[39m movement[33m.[39mproductVariant[33m.[39mattributeLinks
+ [90m     |[39m                                   [31m[1m^[22m[39m
+ [90m 254 |[39m             [33m.[39mmap((link) [33m=>[39m link[33m.[39mproductAttributeValue[33m.[39mvalue)
+ [90m 255 |[39m             [33m.[39mjoin([32m" / "[39m) [33m||[39m movement[33m.[39mproductVariant[33m.[39msku [33m||[39m [32m"Variant"[39m
+ [90m 256 |[39m         [33m:[39m [36mnull[39m[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null

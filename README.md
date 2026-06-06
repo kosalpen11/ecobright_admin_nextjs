@@ -102,13 +102,19 @@ This credential is only for local/dev. Change or remove it in production.
 Start the admin app:
 
 ```bash
-pnpm nx dev admin
+pnpm dev
 ```
 
 Build the admin app:
 
 ```bash
-pnpm nx build admin
+pnpm build
+```
+
+Start the production build on `http://localhost:3000`:
+
+```bash
+pnpm start
 ```
 
 ## Modules

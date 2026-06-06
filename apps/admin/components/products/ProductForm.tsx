@@ -5,8 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { nanoid } from "nanoid";
 import { AlertCircle, Plus, Trash2 } from "lucide-react";
 import { ActionForm } from "@/components/action-form";
-import { ProductGalleryUploader } from "@/components/products/ProductGalleryUploader";
-import { ProductImageUploader } from "@/components/products/ProductImageUploader";
+// uploaders disabled for manual URL fields
 import { Button, Card, CardContent, Input, Label, Select, Textarea } from "@/components/ui";
 
 type CategoryOption = {
@@ -643,8 +642,7 @@ export function ProductForm({
         </div>
       ) : null}
 
-      <input type="hidden" name="imageUrl" value={mainImageUrl} />
-      <input type="hidden" name="imageUrls" value={galleryImageUrls.join(", ")} />
+      {/* Image fields (uploader disabled) */}
       <input type="hidden" name="attributesPayload" value={serializedAttributes} />
       <input type="hidden" name="variantsPayload" value={serializedVariants} />
 
@@ -1159,8 +1157,39 @@ export function ProductForm({
         </div>
 
         <div className="space-y-6">
-          <ProductImageUploader entityId={entityId} value={mainImageUrl} onChange={setMainImageUrl} />
-          <ProductGalleryUploader entityId={entityId} value={galleryImageUrls} onChange={setGalleryImageUrls} />
+          <Card className="shadow-sm">
+            <CardContent className="space-y-4 p-6">
+              <div className="space-y-2">
+                <Label htmlFor="image_url">Main Image URL</Label>
+                <Input
+                  id="image_url"
+                  name="image_url"
+                  value={mainImageUrl}
+                  onChange={(event) => setMainImageUrl(event.target.value)}
+                  placeholder="https://..."
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="image_urls">Gallery Image URLs (comma-separated)</Label>
+                <Textarea
+                  id="image_urls"
+                  name="image_urls"
+                  value={galleryImageUrls.join(", ")}
+                  onChange={(event) =>
+                    setGalleryImageUrls(
+                      event.target.value
+                        .split(",")
+                        .map((s) => s.trim())
+                        .filter(Boolean)
+                    )
+                  }
+                  rows={4}
+                  placeholder="https://..., https://..."
+                />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </ActionForm>
