@@ -21,7 +21,12 @@ export default async function CategoriesPage({
       orderBy: { updatedAt: "desc" },
       skip,
       take: pageSize,
-      include: {
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        description: true,
+        updatedAt: true,
         createdBy: {
           select: {
             name: true

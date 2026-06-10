@@ -18,7 +18,7 @@ export default async function DashboardPage() {
     recentMovements,
     lowStockProducts,
     recentUsers
-  ] = await Promise.all([
+  ] = await db.$transaction([
     db.product.count(),
     db.category.count(),
     db.product.count({
@@ -86,7 +86,21 @@ export default async function DashboardPage() {
             createdAt: true
           }
         })
-      : Promise.resolve([])
+      : db.user.findMany({
+          where: {
+            id: {
+              in: []
+            }
+          },
+          select: {
+            id: true,
+            name: true,
+            email: true,
+            role: true,
+            isActive: true,
+            createdAt: true
+          }
+        })
   ]);
 
   return (

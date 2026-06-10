@@ -1,0 +1,35 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 2.7s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.7s (1005 modules)
+ GET / [32m200[39m in 3080ms
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ [32m[1m✓[22m[39m Compiled /login in 2.1s (1166 modules)
+ GET / [32m200[39m in 777ms
+ GET /apple-touch-icon-precomposed.png [33m404[39m in 2458ms
+ GET /apple-touch-icon.png [33m404[39m in 2455ms
+ GET /login [32m200[39m in 186ms
+ GET /login?callbackUrl=%2Fproducts%2Fsolar-flood-light%2Fedit [32m200[39m in 45ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 139ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 1073ms (1448 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1445ms
+ GET /dashboard [32m200[39m in 13331ms
+ GET /dashboard [32m200[39m in 2631ms
+ [37m[1m○[22m[39m Compiling /products ...
+ [32m[1m✓[22m[39m Compiled /products in 534ms (1471 modules)
+ GET /products [32m200[39m in 1784ms
+ [37m[1m○[22m[39m Compiling /products/new ...
+ [32m[1m✓[22m[39m Compiled /products/new in 744ms (1491 modules)
+ GET /products/new [32m200[39m in 1508ms
+^C[?25h

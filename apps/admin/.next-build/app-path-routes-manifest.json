@@ -1,17 +1,18 @@
 {
   "/_not-found/page": "/_not-found",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/api/search/products/route": "/api/search/products",
   "/api/uploads/product/route": "/api/uploads/product",
-  "/page": "/",
   "/login/page": "/login",
-  "/(admin)/categories/[id]/edit/page": "/categories/[id]/edit",
-  "/(admin)/stock/page": "/stock",
-  "/(admin)/dashboard/page": "/dashboard",
-  "/(admin)/products/page": "/products",
-  "/(admin)/products/[id]/edit/page": "/products/[id]/edit",
-  "/(admin)/categories/new/page": "/categories/new",
+  "/page": "/",
   "/(admin)/categories/page": "/categories",
+  "/(admin)/categories/[id]/edit/page": "/categories/[id]/edit",
+  "/(admin)/dashboard/page": "/dashboard",
+  "/(admin)/products/[id]/edit/page": "/products/[id]/edit",
+  "/(admin)/products/new/page": "/products/new",
+  "/(admin)/products/page": "/products",
+  "/(admin)/categories/new/page": "/categories/new",
   "/(admin)/users/page": "/users",
-  "/(admin)/users/[id]/password/page": "/users/[id]/password",
-  "/(admin)/products/new/page": "/products/new"
+  "/(admin)/stock/page": "/stock",
+  "/(admin)/users/[id]/password/page": "/users/[id]/password"
 }

@@ -1,6 +1,7 @@
 {
   "version": 1,
   "functions": {
-    "/api/uploads/product": {}
+    "/api/uploads/product": {},
+    "/api/search/products": {}
   }
 }

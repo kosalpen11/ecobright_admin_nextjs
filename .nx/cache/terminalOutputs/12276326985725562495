@@ -1,0 +1,24 @@
+> sh -c 'rm -rf apps/admin/.next-build apps/admin/.next/types && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'
+
+   ▲ Next.js 15.5.18
+
+(node:46084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:46168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 7.8s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/api/search/products/route.ts:37:30
+Type error: Expected 0 type arguments, but got 1.
+
+[0m [90m 35 |[39m   [36mconst[39m contains [33m=[39m [32m`%${query}%`[39m[33m;[39m
+ [90m 36 |[39m
+[31m[1m>[22m[39m[90m 37 |[39m   [36mconst[39m rows [33m=[39m [36mawait[39m neonSql[33m<[39m[33mProductSearchRow[39m[][33m>[39m[32m`[39m
+ [90m    |[39m                              [31m[1m^[22m[39m
+ [90m 38 |[39m [32m    SELECT[39m
+ [90m 39 |[39m [32m      id,[39m
+ [90m 40 |[39m [32m      title,[39m[0m
+Next.js build worker exited with code: 1 and signal: null

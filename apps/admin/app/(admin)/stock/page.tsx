@@ -3,6 +3,7 @@ import Link from "next/link";
 import { db } from "@eco-bright/db";
 import { StockMovementForm } from "@/components/stock-movement-form";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard, StatusBadge } from "@/components/page-shell";
+import { ProductSearchInput } from "@/components/product-search-input";
 import { QueryForm } from "@/components/query-form";
 import { StockBadge } from "@/components/stock-badge";
 import { Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
@@ -121,88 +122,101 @@ export default async function StockPage({
 
   const supportsVariants = hasVariantModels(db);
 
-  const [products, totalMovements] = await Promise.all([
-    db.product.findMany({
-      where: productPickerWhere,
-      orderBy: { title: "asc" },
-      select: {
-        id: true,
-        title: true,
-        stockQty: true
-      }
-    }),
-    db.stockMovement.count({
-      where: movementWhere
-    })
-  ]);
-
-  const movementRows = supportsVariants
-    ? await db.stockMovement.findMany({
-        where: movementWhere,
-        orderBy: { createdAt: "desc" },
-        skip,
-        take: pageSize,
-        select: {
-          id: true,
-          type: true,
-          quantity: true,
-          previousStock: true,
-          newStock: true,
-          note: true,
-          createdAt: true,
-          product: {
-            select: {
-              id: true,
-              title: true
-            }
-          },
-          productVariant: {
-            select: {
-              sku: true,
-              attributeLinks: {
-                select: {
-                  productAttributeValue: {
-                    select: {
-                      value: true
+  const [products, totalMovements, movementRows] = supportsVariants
+    ? await db.$transaction([
+        db.product.findMany({
+          where: productPickerWhere,
+          orderBy: { title: "asc" },
+          select: {
+            id: true,
+            title: true,
+            stockQty: true
+          }
+        }),
+        db.stockMovement.count({
+          where: movementWhere
+        }),
+        db.stockMovement.findMany({
+          where: movementWhere,
+          orderBy: { createdAt: "desc" },
+          skip,
+          take: pageSize,
+          select: {
+            id: true,
+            type: true,
+            quantity: true,
+            previousStock: true,
+            newStock: true,
+            note: true,
+            createdAt: true,
+            product: {
+              select: {
+                id: true,
+                title: true
+              }
+            },
+            productVariant: {
+              select: {
+                sku: true,
+                attributeLinks: {
+                  select: {
+                    productAttributeValue: {
+                      select: {
+                        value: true
+                      }
                     }
                   }
                 }
               }
-            }
-          },
-          createdBy: {
-            select: {
-              name: true
-            }
-          }
-        }
-      })
-    : await db.stockMovement.findMany({
-        where: movementWhere,
-        orderBy: { createdAt: "desc" },
-        skip,
-        take: pageSize,
-        select: {
-          id: true,
-          type: true,
-          quantity: true,
-          previousStock: true,
-          newStock: true,
-          note: true,
-          createdAt: true,
-          product: {
-            select: {
-              id: true,
-              title: true
-            }
-          },
-          createdBy: {
-            select: {
-              name: true
+            },
+            createdBy: {
+              select: {
+                name: true
+              }
             }
           }
-        }
-      });
+        })
+      ])
+    : await db.$transaction([
+        db.product.findMany({
+          where: productPickerWhere,
+          orderBy: { title: "asc" },
+          select: {
+            id: true,
+            title: true,
+            stockQty: true
+          }
+        }),
+        db.stockMovement.count({
+          where: movementWhere
+        }),
+        db.stockMovement.findMany({
+          where: movementWhere,
+          orderBy: { createdAt: "desc" },
+          skip,
+          take: pageSize,
+          select: {
+            id: true,
+            type: true,
+            quantity: true,
+            previousStock: true,
+            newStock: true,
+            note: true,
+            createdAt: true,
+            product: {
+              select: {
+                id: true,
+                title: true
+              }
+            },
+            createdBy: {
+              select: {
+                name: true
+              }
+            }
+          }
+        })
+      ]);
 
   const variants =
     supportsVariants && products.length > 0
@@ -292,7 +306,7 @@ export default async function StockPage({
                 <label htmlFor="product" className="text-sm font-medium text-slate-700">
                   Product Search
                 </label>
-                <Input
+                <ProductSearchInput
                   id="product"
                   name="product"
                   defaultValue={productFilter}
@@ -348,7 +362,7 @@ export default async function StockPage({
                 <label htmlFor="historyProduct" className="text-sm font-medium text-slate-700">
                   Product
                 </label>
-                <Input
+                <ProductSearchInput
                   id="historyProduct"
                   name="product"
                   defaultValue={productFilter}

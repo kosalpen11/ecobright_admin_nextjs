@@ -1,0 +1,302 @@
+[2m> [22msh -c 'set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && next dev'
+
+   [1m[38;2;173;127;168m▲ Next.js 15.5.18[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.5:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 2.7s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled /login in 6.3s (1175 modules)
+ GET /login?callbackUrl=%2Fdashboard [32m200[39m in 2929ms
+ GET / [32m200[39m in 6769ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 192.168.1.5 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [32m[1m✓[22m[39m Compiled /middleware in 100ms (115 modules)
+ [37m[1m○[22m[39m Compiling /dashboard ...
+ [32m[1m✓[22m[39m Compiled /dashboard in 655ms (1429 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /dashboard [32m200[39m in 1073ms
+ GET /dashboard [32m200[39m in 723ms
+ GET /login?callbackUrl=%2Fdashboard [32m200[39m in 116ms
+ GET / [32m200[39m in 117ms
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.category.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.category.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.category.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.category.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.stockMovement.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.product.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+[31mprisma:error[39m 
+Invalid `prisma.user.findMany()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+ [31m[1m⨯[22m[39m Error [PrismaClientInitializationError]: 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+    at async DashboardPage (app/(admin)/dashboard/page.tsx:21:7)
+[0m [90m 19 |[39m     lowStockProducts[33m,[39m
+ [90m 20 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 21 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 22 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 24 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  errorCode: [90mundefined[39m,
+  retryable: [90mundefined[39m,
+  digest: [32m'2988005932'[39m
+}
+ [31m[1m⨯[22m[39m Error [PrismaClientInitializationError]: 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+    at async DashboardPage (app/(admin)/dashboard/page.tsx:21:7)
+[0m [90m 19 |[39m     lowStockProducts[33m,[39m
+ [90m 20 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 21 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 22 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 24 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  errorCode: [90mundefined[39m,
+  retryable: [90mundefined[39m,
+  digest: [32m'2988005932'[39m
+}
+ [31m[1m⨯[22m[39m Error [PrismaClientInitializationError]: 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+    at async DashboardPage (app/(admin)/dashboard/page.tsx:21:7)
+[0m [90m 19 |[39m     lowStockProducts[33m,[39m
+ [90m 20 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 21 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 22 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 24 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  errorCode: [90mundefined[39m,
+  retryable: [90mundefined[39m,
+  digest: [32m'2988005932'[39m
+}
+ [31m[1m⨯[22m[39m Error [PrismaClientInitializationError]: 
+Invalid `prisma.product.count()` invocation:
+
+
+Can't reach database server at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-super-lab-am84gx1m-pooler.c-5.us-east-1.aws.neon.tech:5432`.
+    at async DashboardPage (app/(admin)/dashboard/page.tsx:21:7)
+[0m [90m 19 |[39m     lowStockProducts[33m,[39m
+ [90m 20 |[39m     recentUsers
+[31m[1m>[22m[39m[90m 21 |[39m   ] [33m=[39m [36mawait[39m [33mPromise[39m[33m.[39mall([
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 22 |[39m     db[33m.[39mproduct[33m.[39mcount()[33m,[39m
+ [90m 23 |[39m     db[33m.[39mcategory[33m.[39mcount()[33m,[39m
+ [90m 24 |[39m     db[33m.[39mproduct[33m.[39mcount({[0m {
+  clientVersion: [32m'6.19.3'[39m,
+  errorCode: [90mundefined[39m,
+  retryable: [90mundefined[39m,
+  digest: [32m'2988005932'[39m
+}
+ GET /dashboard [32m200[39m in 4768ms
+ GET /dashboard [32m200[39m in 4480ms
+^C[?25h

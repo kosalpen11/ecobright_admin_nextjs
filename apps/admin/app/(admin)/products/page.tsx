@@ -3,9 +3,10 @@ import { Prisma } from "@eco-bright/db";
 import { deleteProductAction, toggleProductActiveAction } from "@/actions/products";
 import { RowActionMenu } from "@/components/row-action-menu";
 import { DataPagination, EmptyState, PageHeader, QueryError, SectionCard, StatusBadge } from "@/components/page-shell";
+import { ProductSearchInput } from "@/components/product-search-input";
 import { ProductImageStack } from "@/components/product-images";
 import { QueryForm } from "@/components/query-form";
-import { Button, Input, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
+import { Button, Select, Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui";
 import { formatCurrency, formatDateTime } from "@/lib/format";
 import { getPagination } from "@/lib/pagination";
 import { db } from "@eco-bright/db";
@@ -122,7 +123,7 @@ export default async function ProductsPage({
               <label htmlFor="q" className="text-sm font-medium text-slate-700">
                 Search
               </label>
-              <Input
+              <ProductSearchInput
                 id="q"
                 name="q"
                 defaultValue={search}

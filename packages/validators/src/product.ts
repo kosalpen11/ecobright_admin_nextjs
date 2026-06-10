@@ -27,6 +27,14 @@ export const productVariantDraftSchema = z.object({
   attributeSelections: z
     .array(productVariantAttributeSelectionSchema)
     .min(1, "Each variant needs at least one attribute/value pair.")
+}).superRefine((variant, ctx) => {
+  if (variant.oldPrice != null && variant.oldPrice < variant.price) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["oldPrice"],
+      message: "Variant old price must be greater than or equal to variant price."
+    });
+  }
 });
 
 export const productSchema = z.object({
@@ -63,4 +71,16 @@ export const productSchema = z.object({
   categoryId: z.string().min(1, "Category is required."),
   attributesPayload: z.string().optional().or(z.literal("")),
   variantsPayload: z.string().optional().or(z.literal(""))
+}).superRefine((product, ctx) => {
+  if (
+    product.oldPrice !== undefined &&
+    product.oldPrice !== "" &&
+    product.oldPrice < product.price
+  ) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ["oldPrice"],
+      message: "Old price must be greater than or equal to price."
+    });
+  }
 });

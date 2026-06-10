@@ -961,6 +961,15 @@
         "hash": "sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ=="
       }
     },
+    "npm:@neondatabase/serverless": {
+      "type": "npm",
+      "name": "npm:@neondatabase/serverless",
+      "data": {
+        "version": "1.1.0",
+        "packageName": "@neondatabase/serverless",
+        "hash": "sha512-r3ZZhRjEcfEdKIZnoB1RusNgvHuaBRqfCzV4Gi+5A9yUX0S4HTws/ASWqt13wL4y4I+0rqsWGdA2w7EQXHi3+Q=="
+      }
+    },
     "npm:@next/env": {
       "type": "npm",
       "name": "npm:@next/env",
@@ -7877,5 +7886,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1780763911300
+  "computedAt": 1781104546304
 }

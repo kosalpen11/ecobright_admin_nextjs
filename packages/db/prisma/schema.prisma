@@ -33,6 +33,9 @@ model User {
   createdItems  Product[]
   movements     StockMovement[]
 
+  @@index([updatedAt(sort: Desc)])
+  @@index([role, updatedAt(sort: Desc)])
+  @@index([isActive, updatedAt(sort: Desc)])
   @@map("users")
 }
 
@@ -132,6 +135,10 @@ model Product {
 
   @@index([title])
   @@index([category])
+  @@index([isActive, updatedAt(sort: Desc)])
+  @@index([category, isActive, updatedAt(sort: Desc)])
+  @@index([inStock, updatedAt(sort: Desc)])
+  @@index([stockQty, updatedAt(sort: Desc)])
   @@index([updatedAt(sort: Desc)])
   @@index([stockQty])
   @@index([needsReview, updatedAt(sort: Desc)])
@@ -183,6 +190,8 @@ model ProductVariant {
   stockMovements StockMovement[]
 
   @@index([productId])
+  @@index([productId, createdAt(sort: Asc)])
+  @@index([productId, isActive, sortOrder])
   @@index([stockQty])
   @@map("product_variants")
 }
@@ -219,6 +228,7 @@ model StockMovement {
 
   @@index([productId, createdAt(sort: Desc)])
   @@index([productVariantId, createdAt(sort: Desc)])
+  @@index([type, createdAt(sort: Desc)])
   @@index([createdAt(sort: Desc)])
   @@index([createdById, createdAt(sort: Desc)])
   @@map("stock_movements")

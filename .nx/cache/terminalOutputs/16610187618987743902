@@ -1,0 +1,47 @@
+> sh -c 'rm -rf apps/admin/.next-build apps/admin/.next/types && set -a; [ -f .env ] && . ./.env; [ -f .env.local ] && . ./.env.local; set +a; cd apps/admin && NEXT_DIST_DIR=.next-build next build'
+
+   ▲ Next.js 15.5.18
+
+(node:42138) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Creating an optimized production build ...
+(node:42177) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully in 7.6s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/13) ...
+   Generating static pages (3/13) 
+   Generating static pages (6/13) 
+   Generating static pages (9/13) 
+ ✓ Generating static pages (13/13)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ƒ /                                      128 B         102 kB
+├ ○ /_not-found                            994 B         103 kB
+├ ƒ /api/auth/[...nextauth]                128 B         102 kB
+├ ƒ /api/uploads/product                   128 B         102 kB
+├ ƒ /categories                          1.31 kB         148 kB
+├ ƒ /categories/[id]/edit                2.63 kB         146 kB
+├ ƒ /categories/new                      2.63 kB         146 kB
+├ ƒ /dashboard                           2.62 kB         146 kB
+├ ƒ /login                               26.9 kB         179 kB
+├ ƒ /products                            1.64 kB         148 kB
+├ ƒ /products/[id]/edit                    131 B         152 kB
+├ ƒ /products/new                          130 B         152 kB
+├ ƒ /stock                               2.33 kB         149 kB
+├ ƒ /users                               2.63 kB         146 kB
+└ ƒ /users/[id]/password                 2.63 kB         146 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/1403cfaa-6db8521358bcd91a.js  54.2 kB
+  ├ chunks/159-2398f495578bc26c.js       45.8 kB
+  └ other shared chunks (total)          1.92 kB
+
+
+ƒ Middleware                               34 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

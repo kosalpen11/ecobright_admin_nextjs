@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { nanoid } from "nanoid";
 import { AlertCircle, Plus, Trash2 } from "lucide-react";
+import { useFormStatus } from "react-dom";
 import { ActionForm } from "@/components/action-form";
 // uploaders disabled for manual URL fields
 import { Button, Card, CardContent, Input, Label, Select, Textarea } from "@/components/ui";
@@ -203,6 +204,26 @@ function createEmptyVariantRow(): VariantRowState {
     isActive: true,
     attributeSelections: [createEmptyVariantAttribute()]
   };
+}
+
+function ProductSubmitButton({
+  mode
+}: {
+  mode: "create" | "edit";
+}) {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" disabled={pending}>
+      {pending
+        ? mode === "create"
+          ? "Creating..."
+          : "Saving..."
+        : mode === "create"
+          ? "Create Product"
+          : "Save Changes"}
+    </Button>
+  );
 }
 
 function isBlankVariant(variant: VariantRowState) {
@@ -1149,7 +1170,7 @@ export function ProductForm({
           </Card>
 
           <div className="flex items-center gap-3">
-            <Button type="submit">{mode === "create" ? "Create Product" : "Save Changes"}</Button>
+            <ProductSubmitButton mode={mode} />
             <Button asChild variant="outline">
               <Link href="/products" onClick={clearLocalDraft}>Cancel</Link>
             </Button>

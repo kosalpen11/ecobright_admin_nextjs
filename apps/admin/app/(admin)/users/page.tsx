@@ -17,10 +17,14 @@ export default async function UsersPage({
   const { error, page: pageParam, pageSize: pageSizeParam } = await searchParams;
   const { page, pageSize, skip } = getPagination(pageParam, pageSizeParam);
 
-  const [totalUsers, adminCount, staffCount, activeCount, users] = await Promise.all([
+  const [totalUsers, roleCounts, activeCount, users] = await Promise.all([
     db.user.count(),
-    db.user.count({ where: { role: "ADMIN" } }),
-    db.user.count({ where: { role: "STAFF" } }),
+    db.user.groupBy({
+      by: ["role"],
+      _count: {
+        _all: true
+      }
+    }),
     db.user.count({ where: { isActive: true } }),
     db.user.findMany({
       orderBy: { updatedAt: "desc" },
@@ -36,6 +40,11 @@ export default async function UsersPage({
       }
     })
   ]);
+
+  const adminCount =
+    roleCounts.find((item) => item.role === "ADMIN")?._count._all ?? 0;
+  const staffCount =
+    roleCounts.find((item) => item.role === "STAFF")?._count._all ?? 0;
 
   return (
     <>
